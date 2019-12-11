@@ -189,9 +189,6 @@ public class empservice {
                 st = connection.createStatement();
                 rs = st.executeQuery(sql);
 
-                System.out.println("User id \tUsername \tGender \t\tCreateDate \t\t\tLastLoggedIn");
-                System.out.println("_____________________________________________________________________________________________________");
-                System.out.println("");
                 
 
             }catch(Exception e){
@@ -202,4 +199,29 @@ public class empservice {
         return rs;
     }
     
+      public ResultSet getatt(){
+       Connection connection = null;
+        ResultSet rs = null;
+        Statement st = null;
+        
+        String sql = "  select u.PIN, u.UserName, d.DeptName, a.Clock, a.Remark  from \n" +
+                     "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
+                     "  where d.DeptId = u.DeptId and u.UID = a.ID ";
+                     //"  order by usr.PIN";
+            
+            try{
+                connection = DBConnection.openConnection();
+                st = connection.createStatement();
+                rs = st.executeQuery(sql);
+
+              
+                
+
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+                e.printStackTrace();
+            }
+
+        return rs;
+    }
 }
