@@ -85,6 +85,12 @@ public class AppInterface extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         addreportscard = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
+        btnaddusertable = new javax.swing.JButton();
+        btnaddattendancetable = new javax.swing.JButton();
+        btnaddleavetable = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         viewreportscard = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -110,6 +116,15 @@ public class AppInterface extends javax.swing.JFrame {
         settingspw = new javax.swing.JPasswordField();
         settingsnun = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        addusertable = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tableuser = new javax.swing.JTable();
+        addleavetable = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tableleave = new javax.swing.JTable();
+        addattendancetable = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1885, 990));
@@ -167,7 +182,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(btnviewreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnaddreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnmainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,21 +302,83 @@ public class AppInterface extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel13.setText("Add Reports");
 
+        btnaddusertable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buttonadddata.png"))); // NOI18N
+        btnaddusertable.setMaximumSize(new java.awt.Dimension(289, 283));
+        btnaddusertable.setMinimumSize(new java.awt.Dimension(289, 283));
+        btnaddusertable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddusertableActionPerformed(evt);
+            }
+        });
+
+        btnaddattendancetable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buttonadddata.png"))); // NOI18N
+        btnaddattendancetable.setMaximumSize(new java.awt.Dimension(289, 283));
+        btnaddattendancetable.setMinimumSize(new java.awt.Dimension(289, 283));
+        btnaddattendancetable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddattendancetableActionPerformed(evt);
+            }
+        });
+
+        btnaddleavetable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buttonadddata.png"))); // NOI18N
+        btnaddleavetable.setMaximumSize(new java.awt.Dimension(289, 283));
+        btnaddleavetable.setMinimumSize(new java.awt.Dimension(289, 283));
+        btnaddleavetable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddleavetableActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel17.setText("Add User Table");
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel18.setText("Add Attendance Table");
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel19.setText("Add Leave Table");
+
         javax.swing.GroupLayout addreportscardLayout = new javax.swing.GroupLayout(addreportscard);
         addreportscard.setLayout(addreportscardLayout);
         addreportscardLayout.setHorizontalGroup(
             addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addreportscardLayout.createSequentialGroup()
-                .addGap(664, 664, 664)
-                .addComponent(jLabel13)
-                .addContainerGap(801, Short.MAX_VALUE))
+                .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(207, 207, 207)
+                        .addComponent(btnaddusertable, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(135, 135, 135)
+                        .addComponent(btnaddattendancetable, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(139, 139, 139)
+                        .addComponent(btnaddleavetable, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(255, 255, 255)
+                        .addComponent(jLabel17)
+                        .addGap(208, 208, 208)
+                        .addComponent(jLabel18)
+                        .addGap(197, 197, 197)
+                        .addComponent(jLabel19))
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(704, 704, 704)
+                        .addComponent(jLabel13)))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
         addreportscardLayout.setVerticalGroup(
             addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addreportscardLayout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(63, 63, 63)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(868, Short.MAX_VALUE))
+                .addGap(142, 142, 142)
+                .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnaddusertable, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnaddattendancetable, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnaddleavetable, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(364, Short.MAX_VALUE))
         );
 
         jPanel3.add(addreportscard, "addreportscard");
@@ -530,6 +607,106 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(changesettingscard, "changesettingscard");
 
+        addusertable.setBackground(new java.awt.Color(0, 102, 102));
+
+        tableuser.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(tableuser);
+
+        javax.swing.GroupLayout addusertableLayout = new javax.swing.GroupLayout(addusertable);
+        addusertable.setLayout(addusertableLayout);
+        addusertableLayout.setHorizontalGroup(
+            addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addusertableLayout.createSequentialGroup()
+                .addGap(283, 283, 283)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1064, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(264, Short.MAX_VALUE))
+        );
+        addusertableLayout.setVerticalGroup(
+            addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addusertableLayout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(421, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(addusertable, "addusertable");
+
+        addleavetable.setBackground(new java.awt.Color(153, 153, 255));
+
+        tableleave.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(tableleave);
+
+        javax.swing.GroupLayout addleavetableLayout = new javax.swing.GroupLayout(addleavetable);
+        addleavetable.setLayout(addleavetableLayout);
+        addleavetableLayout.setHorizontalGroup(
+            addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addleavetableLayout.createSequentialGroup()
+                .addGap(282, 282, 282)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1078, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(251, Short.MAX_VALUE))
+        );
+        addleavetableLayout.setVerticalGroup(
+            addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addleavetableLayout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(424, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(addleavetable, "addleavetable");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable1);
+
+        javax.swing.GroupLayout addattendancetableLayout = new javax.swing.GroupLayout(addattendancetable);
+        addattendancetable.setLayout(addattendancetableLayout);
+        addattendancetableLayout.setHorizontalGroup(
+            addattendancetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addattendancetableLayout.createSequentialGroup()
+                .addGap(276, 276, 276)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1079, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(256, Short.MAX_VALUE))
+        );
+        addattendancetableLayout.setVerticalGroup(
+            addattendancetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addattendancetableLayout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(425, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(addattendancetable, "addattendancetable");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -639,6 +816,21 @@ public class AppInterface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_settingsnunActionPerformed
 
+    private void btnaddusertableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddusertableActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addusertable");
+    }//GEN-LAST:event_btnaddusertableActionPerformed
+
+    private void btnaddattendancetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddattendancetableActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addattendancetable");
+    }//GEN-LAST:event_btnaddattendancetableActionPerformed
+
+    private void btnaddleavetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddleavetableActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addleavetable");
+    }//GEN-LAST:event_btnaddleavetableActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -675,8 +867,14 @@ public class AppInterface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel addattendancetable;
+    private javax.swing.JPanel addleavetable;
     private javax.swing.JPanel addreportscard;
+    private javax.swing.JPanel addusertable;
+    private javax.swing.JButton btnaddattendancetable;
+    private javax.swing.JButton btnaddleavetable;
     private javax.swing.JButton btnaddreports;
+    private javax.swing.JButton btnaddusertable;
     private javax.swing.JButton btnchangesettings;
     private javax.swing.JButton btnconfirm;
     private javax.swing.JButton btngeneratepdf;
@@ -693,6 +891,9 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -705,7 +906,11 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JButton mainmenuar;
     private javax.swing.JPanel mainmenucard;
     private javax.swing.JButton mainmenuvr;
@@ -714,6 +919,8 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JTextField settingsnun;
     private javax.swing.JPasswordField settingspw;
     private javax.swing.JTextField settingsun;
+    private javax.swing.JTable tableleave;
+    private javax.swing.JTable tableuser;
     private javax.swing.JTable tablevr;
     private javax.swing.JComboBox<String> viewreportmonth;
     private javax.swing.JPanel viewreportscard;
