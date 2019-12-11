@@ -17,16 +17,18 @@ public class empmodel {
     private String username;
     private String password;    
     private String newpassword;
+    private String newusername;
 
    
      public empmodel() {
     }
     
-    public empmodel(String branchname, String username, String password, String newpassword) {
+    public empmodel(String branchname, String username, String password, String newpassword, String newusername) {
         this.branchname = branchname;
         this.username = username;
         this.password = password;
         this.newpassword = newpassword;
+        this.newusername = newusername;
     }
     
     public String getNewpassword() {
@@ -35,6 +37,14 @@ public class empmodel {
 
     public void setNewpassword(String newpassword) {
         this.newpassword = newpassword;
+    }
+    
+    public String getNewusername() {
+        return newusername;
+    }
+
+    public void setNewusername(String newusername) {
+        this.newusername = newusername;
     }
      public String getBranchname() {
         return branchname;

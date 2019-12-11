@@ -100,5 +100,48 @@ public class empservice {
         return status;
          
      }
+     
+     
+     public boolean changeun(empmodel em){
+         
+        con = DBConnect.connect();
+        boolean status = false;
+        ResultSet rs;
+        String un = null;
+        String pw = null;
+        try {           
+            
+            ps = con.prepareStatement("Select password from users where branchname = ?");
+            ps.setString(1, em.getBranchname());
+            rs = ps.executeQuery();
+            
+           
+         
+           
+            while(rs.next()){
+                pw = rs.getString(1);
+              
+            }
+            
+           
+            if( pw.equals(em.getPassword())){
+                
+                ps1 = con.prepareStatement("update users set username = ? where branchname = ?");
+                    ps1.setString(1,em.getNewusername());
+                    ps1.setString(2,em.getBranchname());
+                    int row = ps1.executeUpdate();
+                    
+                    if(row != 0){
+                        status = true;
+                    }
+                
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return status;
+         
+     }
     
 }

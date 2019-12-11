@@ -104,9 +104,12 @@ public class AppInterface extends javax.swing.JFrame {
         settingsun = new javax.swing.JTextField();
         settingscpw = new javax.swing.JPasswordField();
         btnconfirm = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        changepwerror = new javax.swing.JLabel();
         settingsnpw = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        settingspw = new javax.swing.JPasswordField();
+        settingsnun = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1885, 990));
@@ -257,16 +260,16 @@ public class AppInterface extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(371, 371, 371))
             .addGroup(mainmenucardLayout.createSequentialGroup()
-                .addGap(705, 705, 705)
+                .addGap(691, 691, 691)
                 .addComponent(jLabel11)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         mainmenucardLayout.setVerticalGroup(
             mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainmenucardLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(51, 51, 51)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129)
+                .addGap(124, 124, 124)
                 .addGroup(mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(mainmenuar, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
                     .addComponent(mainmenuvr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -396,7 +399,7 @@ public class AppInterface extends javax.swing.JFrame {
         jLabel5.setText("Change Password");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setText("About Software");
+        jLabel6.setText("Change Username");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel7.setText("Username");
@@ -419,12 +422,30 @@ public class AppInterface extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setText("Data about software maintainance and development");
-
-        changepwerror.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        changepwerror.setForeground(new java.awt.Color(255, 0, 51));
-
         settingsnpw.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel16.setText("Current Password");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel10.setText("New Username");
+
+        settingspw.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+
+        settingsnun.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        settingsnun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                settingsnunActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jButton1.setText("Confirm");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout changesettingscardLayout = new javax.swing.GroupLayout(changesettingscard);
         changesettingscard.setLayout(changesettingscardLayout);
@@ -436,28 +457,40 @@ public class AppInterface extends javax.swing.JFrame {
                         .addGap(639, 639, 639)
                         .addComponent(jLabel5))
                     .addGroup(changesettingscardLayout.createSequentialGroup()
+                        .addGap(634, 634, 634)
+                        .addComponent(jLabel6))
+                    .addGroup(changesettingscardLayout.createSequentialGroup()
                         .addGap(456, 456, 456)
-                        .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(settingsun, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                            .addComponent(settingscpw)
-                            .addComponent(settingsnpw)))
+                        .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, changesettingscardLayout.createSequentialGroup()
+                                .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(settingsun, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
+                                    .addComponent(settingscpw)
+                                    .addComponent(settingsnpw)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, changesettingscardLayout.createSequentialGroup()
+                                .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(changesettingscardLayout.createSequentialGroup()
+                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, Short.MAX_VALUE))
+                                    .addGroup(changesettingscardLayout.createSequentialGroup()
+                                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(148, 148, 148)))
+                                .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(settingspw, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(settingsnun, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(88, 88, 88))))
                     .addGroup(changesettingscardLayout.createSequentialGroup()
                         .addGap(649, 649, 649)
-                        .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnconfirm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(btnconfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(changesettingscardLayout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 1273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(changesettingscardLayout.createSequentialGroup()
-                        .addGap(584, 584, 584)
-                        .addComponent(changepwerror, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(180, Short.MAX_VALUE))
+                        .addGap(652, 652, 652)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(445, Short.MAX_VALUE))
         );
         changesettingscardLayout.setVerticalGroup(
             changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -474,17 +507,25 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                    .addComponent(settingsnpw))
+                    .addComponent(settingsnpw, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(39, 39, 39)
-                .addComponent(btnconfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
-                .addComponent(changepwerror, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addComponent(btnconfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(changesettingscardLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(settingspw, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(settingsnun, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(221, Short.MAX_VALUE))
         );
 
         jPanel3.add(changesettingscard, "changesettingscard");
@@ -499,7 +540,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -529,6 +570,11 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btnchangesettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnchangesettingsActionPerformed
         // TODO add your handling code here:
+        settingsun.setText("");
+        settingscpw.setText("");
+        settingsnpw.setText("");
+        settingspw.setText("");
+        settingsnun.setText("");
         viewPanel("changesettingscard");
     }//GEN-LAST:event_btnchangesettingsActionPerformed
 
@@ -562,10 +608,36 @@ public class AppInterface extends javax.swing.JFrame {
       if (status == true){
           viewPanel("mainmenucard");
       }else{
-          changepwerror.setText("Username or Password Incorrect");
+          
+          JOptionPane.showMessageDialog(null, "Username or Password Incorrect");
           
       }
     }//GEN-LAST:event_btnconfirmActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        empmodel em = new empmodel();
+        em.setBranchname(branchname);
+        
+        em.setPassword(settingspw.getText());
+        em.setNewusername(settingsnun.getText());
+        
+        empservice es = new empservice();
+        
+        Boolean status = es.changeun(em);
+      
+      if (status == true){
+          viewPanel("mainmenucard");
+      }else{
+          
+          JOptionPane.showMessageDialog(null, "Password Incorrect");
+          
+      }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void settingsnunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsnunActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_settingsnunActionPerformed
 
     /**
      * @param args the command line arguments
@@ -611,8 +683,8 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JButton btnmainmenu;
     private javax.swing.JButton btnsearch;
     private javax.swing.JButton btnviewreports;
-    private javax.swing.JLabel changepwerror;
     private javax.swing.JPanel changesettingscard;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -620,6 +692,7 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -638,6 +711,8 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JButton mainmenuvr;
     private javax.swing.JPasswordField settingscpw;
     private javax.swing.JTextField settingsnpw;
+    private javax.swing.JTextField settingsnun;
+    private javax.swing.JPasswordField settingspw;
     private javax.swing.JTextField settingsun;
     private javax.swing.JTable tablevr;
     private javax.swing.JComboBox<String> viewreportmonth;
