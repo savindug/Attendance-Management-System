@@ -5,6 +5,9 @@
  */
 package view;
 
+import com.Savindu.Controller.Controller;
+import com.Savindu.Controller.ServerController;
+import com.Savindu.Entity.User;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Image;
@@ -18,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -31,6 +35,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
+import javax.swing.table.DefaultTableModel;
 import model.empmodel;
 import net.proteanit.sql.DbUtils;
 import service.empservice;
@@ -273,7 +278,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(mainmenucardLayout.createSequentialGroup()
                         .addGap(392, 392, 392)
                         .addComponent(jLabel3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addGroup(mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainmenucardLayout.createSequentialGroup()
                         .addGap(279, 279, 279)
@@ -300,7 +305,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGroup(mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(374, Short.MAX_VALUE))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         jPanel3.add(mainmenucard, "mainmenucard");
@@ -383,7 +388,7 @@ public class AppInterface extends javax.swing.JFrame {
                                 .addComponent(jLabel19)
                                 .addGap(67, 67, 67)
                                 .addComponent(jLabel20)))))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         addreportscardLayout.setVerticalGroup(
             addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,7 +407,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(369, Short.MAX_VALUE))
+                .addContainerGap(232, Short.MAX_VALUE))
         );
 
         jPanel3.add(addreportscard, "addreportscard");
@@ -423,6 +428,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         viewreportyear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         viewreportyear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045" }));
+        viewreportyear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewreportyearActionPerformed(evt);
+            }
+        });
 
         btnsearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnsearch.setText("Search");
@@ -469,7 +479,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(viewreportscardLayout.createSequentialGroup()
                         .addGap(643, 643, 643)
                         .addComponent(btngeneratepdf, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addContainerGap(345, Short.MAX_VALUE))
         );
         viewreportscardLayout.setVerticalGroup(
             viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,7 +499,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65)
                 .addComponent(btngeneratepdf, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(241, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportscard, "viewreportscard");
@@ -591,7 +601,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(changesettingscardLayout.createSequentialGroup()
                         .addGap(652, 652, 652)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(445, Short.MAX_VALUE))
+                .addContainerGap(442, Short.MAX_VALUE))
         );
         changesettingscardLayout.setVerticalGroup(
             changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -626,7 +636,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(settingsnun, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
                 .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         jPanel3.add(changesettingscard, "changesettingscard");
@@ -635,10 +645,7 @@ public class AppInterface extends javax.swing.JFrame {
 
         tableuser.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
@@ -653,14 +660,14 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(addusertableLayout.createSequentialGroup()
                 .addGap(283, 283, 283)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1064, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
         addusertableLayout.setVerticalGroup(
             addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addusertableLayout.createSequentialGroup()
                 .addGap(140, 140, 140)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(421, Short.MAX_VALUE))
+                .addContainerGap(284, Short.MAX_VALUE))
         );
 
         jPanel3.add(addusertable, "addusertable");
@@ -687,24 +694,21 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(addleavetableLayout.createSequentialGroup()
                 .addGap(282, 282, 282)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1078, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
         addleavetableLayout.setVerticalGroup(
             addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addleavetableLayout.createSequentialGroup()
                 .addGap(143, 143, 143)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(424, Short.MAX_VALUE))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
 
         jPanel3.add(addleavetable, "addleavetable");
 
         tableatt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
@@ -719,14 +723,14 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(addattendancetableLayout.createSequentialGroup()
                 .addGap(276, 276, 276)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1079, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(256, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
         addattendancetableLayout.setVerticalGroup(
             addattendancetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addattendancetableLayout.createSequentialGroup()
                 .addGap(137, 137, 137)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(425, Short.MAX_VALUE))
+                .addContainerGap(288, Short.MAX_VALUE))
         );
 
         jPanel3.add(addattendancetable, "addattendancetable");
@@ -761,7 +765,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(addnotesLayout.createSequentialGroup()
                         .addGap(670, 670, 670)
                         .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
         );
         addnotesLayout.setVerticalGroup(
             addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -772,7 +776,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
                 .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(309, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         jPanel3.add(addnotes, "addnotes");
@@ -794,7 +798,7 @@ public class AppInterface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1136, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 984, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -832,6 +836,8 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void mainmenuvrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainmenuvrActionPerformed
         // TODO add your handling code here:
+        ServerController sc = new ServerController();
+        tablevr.setModel(DbUtils.resultSetToTableModel(sc.getemployees()));
         viewPanel("viewreportscard");
     }//GEN-LAST:event_mainmenuvrActionPerformed
 
@@ -887,7 +893,7 @@ public class AppInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_settingsnunActionPerformed
 
     private void btnaddusertableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddusertableActionPerformed
-        // TODO add your handling code here:
+         //TODO add your handling code here:
         empservice es = new empservice();
         tableuser.setModel(DbUtils.resultSetToTableModel(es.getemployees()));
         viewPanel("addusertable");
@@ -911,6 +917,10 @@ public class AppInterface extends javax.swing.JFrame {
         tableleave.setModel(DbUtils.resultSetToTableModel(es.getleave()));
         viewPanel("addleavetable");
     }//GEN-LAST:event_btnaddleavetable1ActionPerformed
+
+    private void viewreportyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportyearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_viewreportyearActionPerformed
 
     /**
      * @param args the command line arguments

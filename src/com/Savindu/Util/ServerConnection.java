@@ -5,24 +5,25 @@
  */
 package com.Savindu.Util;
 
+import static com.Savindu.Util.DBConnection.openConnection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import view.AppInterface;
 
 /**
  *
  * @author Savindu
  */
-public class DBConnection {
-       
-	private static final String URL = "jdbc:sqlserver://localhost:50042;DatabaseName=RIMS_Attendance";
+public class ServerConnection {
+    
+        
+	private static final String URL = "jdbc:mysql://213.136.89.67:3306/southnet_Attendance_Management";
 	
 	private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 	
-	private static final String USERNAME = "sa";
+	private static final String USERNAME = "southnet_App";
 	
-	private static final String PASSWORD = "12345";
+	private static final String PASSWORD = "#Admin@98";
 	
 	private static Connection connection = null;
 	
@@ -44,7 +45,7 @@ public static Connection openConnection() {
 			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
                         
                         if(connection != null) {
-                            System.out.println("Successfully Connected to the Database!");
+                            System.out.println("Successfully Connected to the Server!");
 
                         }
 	
@@ -61,6 +62,7 @@ public static Connection openConnection() {
 		return connection;
 	}
 }
-
-
+    public static void main(String args[]) {
+      openConnection();
+    }
 }

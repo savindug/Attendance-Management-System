@@ -5,6 +5,7 @@
  */
 package service;
 
+import com.Savindu.Controller.ServerController;
 import com.Savindu.Entity.User;
 import java.sql.Connection;
 import com.Savindu.Util.DBConnection;
@@ -170,7 +171,10 @@ public class empservice {
                 e.printStackTrace();
             }
 
+             ServerController ss = new ServerController();
+             ss.insertUserList();
         return rs;
+        
     }
      
      public ResultSet getleave(){
@@ -212,16 +216,14 @@ public class empservice {
             try{
                 connection = DBConnection.openConnection();
                 st = connection.createStatement();
-                rs = st.executeQuery(sql);
-
-              
-                
+                rs = st.executeQuery(sql);     
 
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, e);
                 e.printStackTrace();
             }
 
+            System.out.println(rs);
         return rs;
     }
 }
