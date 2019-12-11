@@ -127,7 +127,7 @@ public class AppInterface extends javax.swing.JFrame {
         tableleave = new javax.swing.JTable();
         addattendancetable = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableatt = new javax.swing.JTable();
         addnotes = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -699,7 +699,7 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(addleavetable, "addleavetable");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableatt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -710,7 +710,7 @@ public class AppInterface extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane4.setViewportView(jTable1);
+        jScrollPane4.setViewportView(tableatt);
 
         javax.swing.GroupLayout addattendancetableLayout = new javax.swing.GroupLayout(addattendancetable);
         addattendancetable.setLayout(addattendancetableLayout);
@@ -895,6 +895,8 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btnaddattendancetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddattendancetableActionPerformed
         // TODO add your handling code here:
+        empservice es = new empservice();
+        tableatt.setModel(DbUtils.resultSetToTableModel(es.getatt()));
         viewPanel("addattendancetable");
     }//GEN-LAST:event_btnaddattendancetableActionPerformed
 
@@ -996,7 +998,6 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton mainmenuar;
     private javax.swing.JPanel mainmenucard;
     private javax.swing.JButton mainmenuvr;
@@ -1005,6 +1006,7 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JTextField settingsnun;
     private javax.swing.JPasswordField settingspw;
     private javax.swing.JTextField settingsun;
+    private javax.swing.JTable tableatt;
     private javax.swing.JTable tableleave;
     private javax.swing.JTable tableuser;
     private javax.swing.JTable tablevr;
