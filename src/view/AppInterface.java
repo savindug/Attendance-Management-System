@@ -129,6 +129,10 @@ public class AppInterface extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         addnotes = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        addnote = new javax.swing.JTextArea();
+        btnaddnote = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1885, 990));
@@ -344,7 +348,7 @@ public class AppInterface extends javax.swing.JFrame {
         });
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel20.setText("Add Notes");
+        jLabel20.setText("Add Field Officer Programmes");
 
         javax.swing.GroupLayout addreportscardLayout = new javax.swing.GroupLayout(addreportscard);
         addreportscard.setLayout(addreportscardLayout);
@@ -377,9 +381,9 @@ public class AppInterface extends javax.swing.JFrame {
                             .addGroup(addreportscardLayout.createSequentialGroup()
                                 .addGap(90, 90, 90)
                                 .addComponent(jLabel19)
-                                .addGap(184, 184, 184)
+                                .addGap(67, 67, 67)
                                 .addComponent(jLabel20)))))
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         addreportscardLayout.setVerticalGroup(
             addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -729,15 +733,46 @@ public class AppInterface extends javax.swing.JFrame {
 
         addnotes.setBackground(new java.awt.Color(255, 255, 204));
 
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel21.setText("Enter Field Officer Programme");
+
+        jScrollPane5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+
+        addnote.setColumns(20);
+        addnote.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        addnote.setRows(5);
+        jScrollPane5.setViewportView(addnote);
+
+        btnaddnote.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnaddnote.setText("Add");
+
         javax.swing.GroupLayout addnotesLayout = new javax.swing.GroupLayout(addnotes);
         addnotes.setLayout(addnotesLayout);
         addnotesLayout.setHorizontalGroup(
             addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1611, Short.MAX_VALUE)
+            .addGroup(addnotesLayout.createSequentialGroup()
+                .addGroup(addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addnotesLayout.createSequentialGroup()
+                        .addGap(614, 614, 614)
+                        .addComponent(jLabel21))
+                    .addGroup(addnotesLayout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 1124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(addnotesLayout.createSequentialGroup()
+                        .addGap(670, 670, 670)
+                        .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
         addnotesLayout.setVerticalGroup(
             addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 984, Short.MAX_VALUE)
+            .addGroup(addnotesLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jLabel21)
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(309, Short.MAX_VALUE))
         );
 
         jPanel3.add(addnotes, "addnotes");
@@ -913,11 +948,13 @@ public class AppInterface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addattendancetable;
     private javax.swing.JPanel addleavetable;
+    private javax.swing.JTextArea addnote;
     private javax.swing.JPanel addnotes;
     private javax.swing.JPanel addreportscard;
     private javax.swing.JPanel addusertable;
     private javax.swing.JButton btnaddattendancetable;
     private javax.swing.JButton btnaddleavetable1;
+    private javax.swing.JButton btnaddnote;
     private javax.swing.JButton btnaddnotes;
     private javax.swing.JButton btnaddreports;
     private javax.swing.JButton btnaddusertable;
@@ -942,6 +979,7 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -956,6 +994,7 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton mainmenuar;
