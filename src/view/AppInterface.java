@@ -966,6 +966,33 @@ public class AppInterface extends javax.swing.JFrame {
         sms1.viewreport(path);
         
         JOptionPane.showMessageDialog(rootPane, "Report Generated");
+        
+        
+        String path1 = "";
+        JFileChooser j1 = new JFileChooser();
+        j1.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int x1 = j1.showSaveDialog(this);
+
+        if (x1 == JFileChooser.APPROVE_OPTION) {
+            path1 = j1.getSelectedFile().getPath();
+        }
+        
+        sms1.viewreportatt(path1);
+        
+        JOptionPane.showMessageDialog(rootPane, "Report Generated");
+        
+        String path2 = "";
+        JFileChooser j2 = new JFileChooser();
+        j2.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int x2 = j2.showSaveDialog(this);
+
+        if (x2 == JFileChooser.APPROVE_OPTION) {
+            path2 = j2.getSelectedFile().getPath();
+        }
+        
+        sms1.viewreportleave(path2);
+        
+        JOptionPane.showMessageDialog(rootPane, "Report Generated");
     }//GEN-LAST:event_btngeneratepdfActionPerformed
 
     /**

@@ -110,7 +110,7 @@ public class ServerController {
 
             try {
             Document document = new Document();
-            PdfWriter.getInstance(document, new FileOutputStream(path + "\\Reports.pdf"));
+            PdfWriter.getInstance(document, new FileOutputStream(path + "\\Reports-Employees.pdf"));
             document.open();
 
             //com.itextpdf.text.Image image = com.itextpdf.text.Image.getInstance("E:\\netbeans\\itpfinal5.0\\itpproject\\src\\images\\Untitled-3.png");
@@ -180,6 +180,8 @@ public class ServerController {
             }
             //table.addCell("item7");
             document.add(table);
+            
+           
 
             document.close();
             //deleted from here
@@ -228,6 +230,111 @@ public class ServerController {
                 }
 
     }
+            
+            
+            
+            public void viewreportatt(String path){
+               
+               Connection connection = null;
+               ResultSet rs = null;
+               PreparedStatement ps = null;
+
+            try {
+            Document document = new Document();
+            PdfWriter.getInstance(document, new FileOutputStream(path + "\\Reports-Attendance.pdf"));
+            document.open();
+
+            //com.itextpdf.text.Image image = com.itextpdf.text.Image.getInstance("E:\\netbeans\\itpfinal5.0\\itpproject\\src\\images\\Untitled-3.png");
+            //document.add(new Paragraph("image"));
+            //document.add(image);
+
+            
+            document.add(new Paragraph(new Date().toString()));
+            document.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
+
+            PdfPTable table = new PdfPTable(5);
+
+            PdfPCell cell = new PdfPCell(new Paragraph("Report - Attendance"));
+            cell.setColspan(5);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell);
+            
+            PdfPTable table1 = new PdfPTable(1);
+
+            PdfPCell cell1 = new PdfPCell(new Paragraph("PIN"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell1);
+            
+            PdfPTable table2 = new PdfPTable(1);
+
+            PdfPCell cell2 = new PdfPCell(new Paragraph("User Name"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell2);
+            
+            PdfPTable table3 = new PdfPTable(1);
+
+            PdfPCell cell3 = new PdfPCell(new Paragraph("Department"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell3);
+            
+            PdfPTable table4 = new PdfPTable(1);
+
+            PdfPCell cell4 = new PdfPCell(new Paragraph("Clock"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell4);
+            
+            PdfPTable table5 = new PdfPTable(1);
+
+            PdfPCell cell5 = new PdfPCell(new Paragraph("Remark"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell5);
+            
+           
+            
+            
+            
+            
+            String sql = "SELECT pin, uname, depart, clock, remark\n" +
+                                "from attendnce";
+           connection = ServerConnection.openConnection();
+           st = connection.createStatement();
+           rs = st.executeQuery(sql);
+            while (rs.next()) {
+                table.addCell(Integer.toString(rs.getInt("pin")));
+                table.addCell((rs.getString("uname")));
+                table.addCell(rs.getString("depart"));
+                table.addCell((rs.getString("clock")));
+                table.addCell((rs.getString("remark")));
+             
+            }
+            //table.addCell("item7");
+            document.add(table);
+            
+           
+
+            document.close();
+            //deleted from here
+            
+        } catch (Exception e) {
+
+        }
+
+         }
+            
+            
+            
+            
             
              public ResultSet getAttList(){
                
@@ -292,6 +399,106 @@ public class ServerController {
                 }
 
     }
+                
+                
+                 public void viewreportleave(String path){
+               
+               Connection connection = null;
+               ResultSet rs = null;
+               PreparedStatement ps = null;
+
+            try {
+            Document document = new Document();
+            PdfWriter.getInstance(document, new FileOutputStream(path + "\\Reports-Leaves.pdf"));
+            document.open();
+
+            //com.itextpdf.text.Image image = com.itextpdf.text.Image.getInstance("E:\\netbeans\\itpfinal5.0\\itpproject\\src\\images\\Untitled-3.png");
+            //document.add(new Paragraph("image"));
+            //document.add(image);
+
+            
+            document.add(new Paragraph(new Date().toString()));
+            document.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
+
+            PdfPTable table = new PdfPTable(5);
+
+            PdfPCell cell = new PdfPCell(new Paragraph("Report - Leaves"));
+            cell.setColspan(5);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell);
+            
+            PdfPTable table1 = new PdfPTable(1);
+
+            PdfPCell cell1 = new PdfPCell(new Paragraph("PIN"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell1);
+            
+            PdfPTable table2 = new PdfPTable(1);
+
+            PdfPCell cell2 = new PdfPCell(new Paragraph("User Name"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell2);
+            
+            PdfPTable table3 = new PdfPTable(1);
+
+            PdfPCell cell3 = new PdfPCell(new Paragraph("From Date"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell3);
+            
+            PdfPTable table4 = new PdfPTable(1);
+
+            PdfPCell cell4 = new PdfPCell(new Paragraph("To Date"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell4);
+            
+            PdfPTable table5 = new PdfPTable(1);
+
+            PdfPCell cell5 = new PdfPCell(new Paragraph("Leave Submitted"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell5);
+            
+           
+            
+            
+            
+            
+            String sql = "SELECT pin, uname, fromDtae, toDate, leaveSubmitted\n" +
+                                "from leaves";
+           connection = ServerConnection.openConnection();
+           st = connection.createStatement();
+           rs = st.executeQuery(sql);
+            while (rs.next()) {
+                table.addCell(Integer.toString(rs.getInt("pin")));
+                table.addCell((rs.getString("uname")));
+                table.addCell(rs.getString("fromDtae"));
+                table.addCell((rs.getString("toDate")));
+                table.addCell((rs.getString("leaveSubmitted")));
+             
+            }
+            //table.addCell("item7");
+            document.add(table);
+            
+           
+
+            document.close();
+            //deleted from here
+            
+        } catch (Exception e) {
+
+        }
+
+         }
 //                
 //                public void displayLeaveList(){
 //        
