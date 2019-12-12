@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.Savindu.Controller;
+import com.Savindu.Entity.Attendance;
 import com.Savindu.Entity.User;
 import com.Savindu.Util.DBConnection;
 import java.sql.*;
@@ -56,7 +57,45 @@ public class Controller {
         return userList;
     }
     
-     public ArrayList<User> leaveList(){
+     public ArrayList<Attendance> getattL(){
+       Connection connection = null;
+        ResultSet rs = null;
+        Statement st = null;
+       Attendance att;
+        ArrayList<Attendance> attL = new ArrayList<>();
+        
+        String sql = "  select u.PIN, u.UserName, d.DeptName, a.Clock, a.Remark  from \n" +
+                     "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
+                     "  where d.DeptId = u.DeptId and u.UID = a.ID ";
+                     //"  order by usr.PIN";
+            
+            try{
+                connection = DBConnection.openConnection();
+                st = connection.createStatement();
+                rs = st.executeQuery(sql);     
+                
+                while(rs.next()){
+                    att = new Attendance();
+                    att.setuId(rs.getString(1));
+                    att.setuName(rs.getString(2));
+                    att.setDepart(rs.getString(3));
+                    att.setAttTime(rs.getString(4));
+                    att.setRemark(rs.getString(5));
+                    attL.add(att);
+                    //System.out.println(user.getuID()+"\t\t"+user.getuName()+"\t\t"+user.getGender()+"\t\t"+user.getCreateDate()+"\t\t"+user.getLastLoggedIn());
+
+                }
+                
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+                e.printStackTrace();
+            }
+
+            System.out.println(rs);
+        return attL;
+    }
+     
+        public ArrayList<User> leaveList(){
         
         ArrayList<User> leaveList = new ArrayList<>();
         

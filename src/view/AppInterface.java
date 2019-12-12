@@ -852,7 +852,7 @@ public class AppInterface extends javax.swing.JFrame {
     private void mainmenuvrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainmenuvrActionPerformed
         // TODO add your handling code here:
         ServerController sc = new ServerController();
-        tablevr.setModel(DbUtils.resultSetToTableModel(sc.getemployees()));
+        tablevr.setModel(DbUtils.resultSetToTableModel(sc.getAttList()));
         viewPanel("viewreportscard");
     }//GEN-LAST:event_mainmenuvrActionPerformed
 
@@ -912,6 +912,8 @@ public class AppInterface extends javax.swing.JFrame {
         empservice es = new empservice();
         tableuser.setModel(DbUtils.resultSetToTableModel(es.getemployees()));
         viewPanel("addusertable");
+        ServerController ss = new ServerController();
+        ss.insertUserList();
     }//GEN-LAST:event_btnaddusertableActionPerformed
 
     private void btnaddattendancetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddattendancetableActionPerformed
@@ -919,6 +921,8 @@ public class AppInterface extends javax.swing.JFrame {
         empservice es = new empservice();
         tableatt.setModel(DbUtils.resultSetToTableModel(es.getatt()));
         viewPanel("addattendancetable");
+        ServerController ss = new ServerController();
+        ss.insertAttList();
     }//GEN-LAST:event_btnaddattendancetableActionPerformed
 
     private void btnaddnotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddnotesActionPerformed
@@ -931,6 +935,8 @@ public class AppInterface extends javax.swing.JFrame {
         empservice es = new empservice();
         tableleave.setModel(DbUtils.resultSetToTableModel(es.getleave()));
         viewPanel("addleavetable");
+        ServerController ss = new ServerController();
+        ss.insertLeaveList();
     }//GEN-LAST:event_btnaddleavetable1ActionPerformed
 
     private void viewreportyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportyearActionPerformed

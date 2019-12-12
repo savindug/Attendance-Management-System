@@ -171,8 +171,6 @@ public class empservice {
                 e.printStackTrace();
             }
 
-             ServerController ss = new ServerController();
-             ss.insertUserList();
         return rs;
         
     }
