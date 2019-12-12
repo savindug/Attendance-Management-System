@@ -195,7 +195,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(btnviewreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnaddreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnmainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -436,6 +436,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         btnsearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnsearch.setText("Search");
+        btnsearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsearchActionPerformed(evt);
+            }
+        });
 
         tablevr.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -452,6 +457,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         btngeneratepdf.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btngeneratepdf.setText("Generate PDF Report");
+        btngeneratepdf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btngeneratepdfActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout viewreportscardLayout = new javax.swing.GroupLayout(viewreportscard);
         viewreportscard.setLayout(viewreportscardLayout);
@@ -749,6 +759,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         btnaddnote.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnaddnote.setText("Add");
+        btnaddnote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddnoteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout addnotesLayout = new javax.swing.GroupLayout(addnotes);
         addnotes.setLayout(addnotesLayout);
@@ -798,7 +813,7 @@ public class AppInterface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 984, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 999, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -921,6 +936,31 @@ public class AppInterface extends javax.swing.JFrame {
     private void viewreportyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportyearActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_viewreportyearActionPerformed
+
+    private void btnaddnoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddnoteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnaddnoteActionPerformed
+
+    private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnsearchActionPerformed
+
+    private void btngeneratepdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngeneratepdfActionPerformed
+        // TODO add your handling code here:
+        ServerController sms1 = new ServerController();
+        String path = "";
+        JFileChooser j = new JFileChooser();
+        j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int x = j.showSaveDialog(this);
+
+        if (x == JFileChooser.APPROVE_OPTION) {
+            path = j.getSelectedFile().getPath();
+        }
+        
+        sms1.viewreport(path);
+        
+        JOptionPane.showMessageDialog(rootPane, "Report Generated");
+    }//GEN-LAST:event_btngeneratepdfActionPerformed
 
     /**
      * @param args the command line arguments

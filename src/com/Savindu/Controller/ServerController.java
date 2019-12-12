@@ -8,11 +8,20 @@ package com.Savindu.Controller;
 import com.Savindu.Entity.User;
 import com.Savindu.Util.ServerConnection;
 import static com.Savindu.Util.ServerConnection.openConnection;
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.FileOutputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -90,7 +99,94 @@ public class ServerController {
                    }
 
                return rs;
-        
+        }        
+               
+        public void viewreport(String path){
+               
+               Connection connection = null;
+               ResultSet rs = null;
+               PreparedStatement ps = null;
+
+            try {
+            Document document = new Document();
+            PdfWriter.getInstance(document, new FileOutputStream(path + "\\Reports.pdf"));
+            document.open();
+
+            //com.itextpdf.text.Image image = com.itextpdf.text.Image.getInstance("E:\\netbeans\\itpfinal5.0\\itpproject\\src\\images\\Untitled-3.png");
+            //document.add(new Paragraph("image"));
+            //document.add(image);
+
+            
+            document.add(new Paragraph(new Date().toString()));
+            document.add(new Paragraph("----------------------------------------------------------------------------------------------------------------------------------"));
+
+            PdfPTable table = new PdfPTable(4);
+
+            PdfPCell cell = new PdfPCell(new Paragraph("Report - Employees"));
+            cell.setColspan(4);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell);
+            
+            PdfPTable table1 = new PdfPTable(1);
+
+            PdfPCell cell1 = new PdfPCell(new Paragraph("User ID"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell1);
+            
+            PdfPTable table2 = new PdfPTable(1);
+
+            PdfPCell cell2 = new PdfPCell(new Paragraph("User Name"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell2);
+            
+            PdfPTable table3 = new PdfPTable(1);
+
+            PdfPCell cell3 = new PdfPCell(new Paragraph("Gender"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell3);
+            
+            PdfPTable table4 = new PdfPTable(1);
+
+            PdfPCell cell4 = new PdfPCell(new Paragraph("Create Date"));
+            cell.setColspan(1);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            //cell.setBackgroundColor(BaseColor.BLUE);
+            table.addCell(cell4);
+            
+           
+            
+            
+            
+            
+            String sql = "SELECT userId, UserName, Gender, CreateDate\n" +
+                                "from Employees";
+           connection = ServerConnection.openConnection();
+           st = connection.createStatement();
+           rs = st.executeQuery(sql);
+            while (rs.next()) {
+                table.addCell(Integer.toString(rs.getInt("userId")));
+                table.addCell((rs.getString("UserName")));
+                table.addCell(rs.getString("Gender"));
+                table.addCell((rs.getString("CreateDate")));
+             
+            }
+            //table.addCell("item7");
+            document.add(table);
+
+            document.close();
+            //deleted from here
+            
+        } catch (Exception e) {
+
+        }
+
          }
         
 //         public void displayLeaveList(){
