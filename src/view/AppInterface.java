@@ -143,7 +143,7 @@ public class AppInterface extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1885, 990));
         setPreferredSize(new java.awt.Dimension(1885, 990));
 
-        jPanel1.setBackground(new java.awt.Color(6, 10, 34));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 51));
         jPanel1.setPreferredSize(new java.awt.Dimension(265, 990));
 
         jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 4));
@@ -215,8 +215,9 @@ public class AppInterface extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(6, 10, 34));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 51));
 
+        jLabel2.setBackground(new java.awt.Color(0, 51, 0));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 71)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Department of Agrarian Development - Galle");
@@ -241,7 +242,7 @@ public class AppInterface extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 102, 51));
         jPanel3.setLayout(new java.awt.CardLayout());
 
-        mainmenucard.setBackground(new java.awt.Color(255, 255, 51));
+        mainmenucard.setBackground(new java.awt.Color(204, 255, 204));
 
         mainmenuvr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/viewreportbutton.png"))); // NOI18N
         mainmenuvr.addActionListener(new java.awt.event.ActionListener() {
@@ -310,7 +311,7 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(mainmenucard, "mainmenucard");
 
-        addreportscard.setBackground(new java.awt.Color(102, 255, 51));
+        addreportscard.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel13.setText("Add Reports");
@@ -412,7 +413,7 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(addreportscard, "addreportscard");
 
-        viewreportscard.setBackground(new java.awt.Color(51, 255, 255));
+        viewreportscard.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel12.setText("View Reports");
@@ -514,7 +515,7 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(viewreportscard, "viewreportscard");
 
-        changesettingscard.setBackground(new java.awt.Color(255, 204, 204));
+        changesettingscard.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setText("Change Password");
@@ -651,7 +652,7 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(changesettingscard, "changesettingscard");
 
-        addusertable.setBackground(new java.awt.Color(0, 102, 102));
+        addusertable.setBackground(new java.awt.Color(204, 255, 204));
 
         tableuser.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -682,7 +683,7 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(addusertable, "addusertable");
 
-        addleavetable.setBackground(new java.awt.Color(153, 153, 255));
+        addleavetable.setBackground(new java.awt.Color(204, 255, 204));
 
         tableleave.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -716,6 +717,8 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(addleavetable, "addleavetable");
 
+        addattendancetable.setBackground(new java.awt.Color(204, 255, 204));
+
         tableatt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -745,7 +748,7 @@ public class AppInterface extends javax.swing.JFrame {
 
         jPanel3.add(addattendancetable, "addattendancetable");
 
-        addnotes.setBackground(new java.awt.Color(255, 255, 204));
+        addnotes.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel21.setText("Enter Field Officer Programme");
@@ -831,7 +834,10 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btnviewreportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewreportsActionPerformed
         // TODO add your handling code here:
+        ServerController sc = new ServerController();
+        tablevr.setModel(DbUtils.resultSetToTableModel(sc.getAttList()));
         viewPanel("viewreportscard");
+        
     }//GEN-LAST:event_btnviewreportsActionPerformed
 
     private void btnchangesettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnchangesettingsActionPerformed
