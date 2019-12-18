@@ -99,16 +99,16 @@ public class AppInterface extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         btnaddleavetable1 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
-        viewreportscard = new javax.swing.JPanel();
+        btnaddot = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
+        viewreportsemp = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        viewreportmonth = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
-        viewreportyear = new javax.swing.JComboBox<>();
-        btnsearch = new javax.swing.JButton();
+        viewreportempbranchname = new javax.swing.JComboBox<>();
+        viewreportempbtnsearch = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tablevr = new javax.swing.JTable();
-        btngeneratepdf = new javax.swing.JButton();
+        viewreportemptable = new javax.swing.JTable();
+        btngeneratereportemployeetable = new javax.swing.JButton();
         changesettingscard = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -127,17 +127,78 @@ public class AppInterface extends javax.swing.JFrame {
         addusertable = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableuser = new javax.swing.JTable();
+        btnbackaddreports1 = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
         addleavetable = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tableleave = new javax.swing.JTable();
+        btnbackaddreports2 = new javax.swing.JButton();
+        jLabel30 = new javax.swing.JLabel();
         addattendancetable = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tableatt = new javax.swing.JTable();
+        btnbackaddreports3 = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
         addnotes = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        addnote = new javax.swing.JTextArea();
         btnaddnote = new javax.swing.JButton();
+        jFileChooser1 = new javax.swing.JFileChooser();
+        btnbackaddreports4 = new javax.swing.JButton();
+        viewreportsatt = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        viewreportsatttable = new javax.swing.JTable();
+        jLabel35 = new javax.swing.JLabel();
+        attablemonth = new javax.swing.JComboBox<>();
+        jLabel36 = new javax.swing.JLabel();
+        attableyear = new javax.swing.JComboBox<>();
+        jLabel37 = new javax.swing.JLabel();
+        attablebranch = new javax.swing.JComboBox<>();
+        btnattablesearch = new javax.swing.JButton();
+        btngeneratereportatttable = new javax.swing.JButton();
+        viewreportsleave = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        leavetablebranch = new javax.swing.JComboBox<>();
+        leavetablemonth = new javax.swing.JComboBox<>();
+        jLabel40 = new javax.swing.JLabel();
+        leavetableyear = new javax.swing.JComboBox<>();
+        btnleavetablesearch = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        viewreportsleavetable = new javax.swing.JTable();
+        btngeneratereportleavetable = new javax.swing.JButton();
+        viewreportscard = new javax.swing.JPanel();
+        btnviewempt = new javax.swing.JButton();
+        viewfopt = new javax.swing.JButton();
+        viewleat = new javax.swing.JButton();
+        viewott = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        btnviewattt = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        viewreportsot = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        ottablemonth = new javax.swing.JComboBox<>();
+        jLabel42 = new javax.swing.JLabel();
+        ottableyear = new javax.swing.JComboBox<>();
+        btnottablesearch = new javax.swing.JButton();
+        ottablebranch = new javax.swing.JComboBox<>();
+        jLabel43 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        viewreportsottable = new javax.swing.JTable();
+        btngeneratereportottable = new javax.swing.JButton();
+        viewnotes = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        addottable = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        tableot = new javax.swing.JTable();
+        btnbackaddreports5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1885, 990));
@@ -306,7 +367,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGroup(mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
 
         jPanel3.add(mainmenucard, "mainmenucard");
@@ -338,13 +399,13 @@ public class AppInterface extends javax.swing.JFrame {
         });
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel17.setText("Add User Table");
+        jLabel17.setText("Add Employee Table");
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel18.setText("Add Attendance Table");
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel19.setText("Add Leave Table");
+        jLabel19.setText("Add OT Table");
 
         btnaddleavetable1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buttonadddata.png"))); // NOI18N
         btnaddleavetable1.addActionListener(new java.awt.event.ActionListener() {
@@ -356,6 +417,16 @@ public class AppInterface extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel20.setText("Add Field Officer Programmes");
 
+        btnaddot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buttonadddata.png"))); // NOI18N
+        btnaddot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddotActionPerformed(evt);
+            }
+        });
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel22.setText("Add Leave Table");
+
         javax.swing.GroupLayout addreportscardLayout = new javax.swing.GroupLayout(addreportscard);
         addreportscard.setLayout(addreportscardLayout);
         addreportscardLayout.setHorizontalGroup(
@@ -363,87 +434,98 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(addreportscardLayout.createSequentialGroup()
                 .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addreportscardLayout.createSequentialGroup()
-                        .addGap(704, 704, 704)
-                        .addComponent(jLabel13))
-                    .addGroup(addreportscardLayout.createSequentialGroup()
                         .addGap(150, 150, 150)
-                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(addreportscardLayout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addGap(98, 98, 98)
+                                .addComponent(jLabel18)
+                                .addGap(15, 15, 15))
                             .addGroup(addreportscardLayout.createSequentialGroup()
                                 .addComponent(btnaddusertable, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(51, 51, 51)
-                                .addComponent(btnaddattendancetable, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(60, 60, 60)
+                                .addComponent(btnaddattendancetable, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(addreportscardLayout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(jLabel17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel18)
-                                .addGap(11, 11, 11)))
-                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(addreportscardLayout.createSequentialGroup()
-                                .addGap(47, 47, 47)
+                                .addGap(56, 56, 56)
                                 .addComponent(btnaddleavetable1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(46, 46, 46)
-                                .addComponent(btnaddnotes, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(addreportscardLayout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(jLabel19)
-                                .addGap(67, 67, 67)
-                                .addComponent(jLabel20)))))
-                .addContainerGap(121, Short.MAX_VALUE))
+                                .addGap(64, 64, 64)
+                                .addComponent(btnaddot, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addreportscardLayout.createSequentialGroup()
+                                .addGap(113, 113, 113)
+                                .addComponent(jLabel22)
+                                .addGap(170, 170, 170)
+                                .addComponent(jLabel19))))
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(705, 705, 705)
+                        .addComponent(jLabel13))
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(654, 654, 654)
+                        .addComponent(btnaddnotes, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(620, 620, 620)
+                        .addComponent(jLabel20)))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         addreportscardLayout.setVerticalGroup(
             addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addreportscardLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(142, 142, 142)
-                .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnaddattendancetable, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnaddleavetable1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnaddusertable, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnaddnotes, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(btnaddusertable, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnaddattendancetable, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnaddleavetable1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnaddot, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(addreportscardLayout.createSequentialGroup()
+                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(18, 18, 18)
+                .addComponent(btnaddnotes, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91))
         );
 
         jPanel3.add(addreportscard, "addreportscard");
 
-        viewreportscard.setBackground(new java.awt.Color(204, 255, 204));
+        viewreportsemp.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel12.setText("View Reports");
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel14.setText("Month");
-
-        viewreportmonth.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        viewreportmonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }));
+        jLabel12.setText("Employee Table");
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel15.setText("Year");
+        jLabel15.setText("Branch Name");
 
-        viewreportyear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        viewreportyear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045" }));
-        viewreportyear.addActionListener(new java.awt.event.ActionListener() {
+        viewreportempbranchname.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        viewreportempbranchname.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ahangama", "Ahungalla", "Aluthwala", "Ambalangoda", "Ambana", "Baddegama", "Batapola", "Elpitiya", "Ethkandura", "Gonadeniya_Udugama", "Gonagala_Gonagalapura", "Karandeniya", "Keradewala", "Kodagoda_Imaduwa", "Koggala", "Labuduwa", "Nagoda_Ethumale", "Neluwa", "Niyagama", "Opatha", "Pahalagamhaya_Miriswaththa_Benthota", "Paragoda_Imaduwa", "Pilana", "Pinkanda", "Pitigala", "Rathgama", "Thawalama", "Uragasmanhandiya", "Urala_Wanduramba", "Walahanduwa", "Wanduramba", "Weragoda", "Yakkalamulla" }));
+        viewreportempbranchname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewreportyearActionPerformed(evt);
+                viewreportempbranchnameActionPerformed(evt);
             }
         });
 
-        btnsearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        btnsearch.setText("Search");
-        btnsearch.addActionListener(new java.awt.event.ActionListener() {
+        viewreportempbtnsearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        viewreportempbtnsearch.setText("Search");
+        viewreportempbtnsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsearchActionPerformed(evt);
+                viewreportempbtnsearchActionPerformed(evt);
             }
         });
 
-        tablevr.setModel(new javax.swing.table.DefaultTableModel(
+        viewreportemptable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -454,66 +536,59 @@ public class AppInterface extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tablevr);
+        jScrollPane1.setViewportView(viewreportemptable);
 
-        btngeneratepdf.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        btngeneratepdf.setText("Generate PDF Report");
-        btngeneratepdf.addActionListener(new java.awt.event.ActionListener() {
+        btngeneratereportemployeetable.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btngeneratereportemployeetable.setText("Generate  Report");
+        btngeneratereportemployeetable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btngeneratepdfActionPerformed(evt);
+                btngeneratereportemployeetableActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout viewreportscardLayout = new javax.swing.GroupLayout(viewreportscard);
-        viewreportscard.setLayout(viewreportscardLayout);
-        viewreportscardLayout.setHorizontalGroup(
-            viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(viewreportscardLayout.createSequentialGroup()
-                .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(viewreportscardLayout.createSequentialGroup()
+        javax.swing.GroupLayout viewreportsempLayout = new javax.swing.GroupLayout(viewreportsemp);
+        viewreportsemp.setLayout(viewreportsempLayout);
+        viewreportsempLayout.setHorizontalGroup(
+            viewreportsempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportsempLayout.createSequentialGroup()
+                .addGroup(viewreportsempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(viewreportsempLayout.createSequentialGroup()
                         .addGap(670, 670, 670)
                         .addComponent(jLabel12))
-                    .addGroup(viewreportscardLayout.createSequentialGroup()
+                    .addGroup(viewreportsempLayout.createSequentialGroup()
                         .addGap(309, 309, 309)
-                        .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(viewreportsempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 954, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(viewreportscardLayout.createSequentialGroup()
-                                .addComponent(jLabel14)
+                            .addGroup(viewreportsempLayout.createSequentialGroup()
+                                .addComponent(jLabel15)
                                 .addGap(18, 18, 18)
-                                .addComponent(viewreportmonth, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(195, 195, 195)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(viewreportempbranchname, javax.swing.GroupLayout.PREFERRED_SIZE, 581, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(viewreportyear, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(227, 227, 227)
-                                .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(viewreportscardLayout.createSequentialGroup()
+                                .addComponent(viewreportempbtnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(viewreportsempLayout.createSequentialGroup()
                         .addGap(643, 643, 643)
-                        .addComponent(btngeneratepdf, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(345, Short.MAX_VALUE))
+                        .addComponent(btngeneratereportemployeetable, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(348, Short.MAX_VALUE))
         );
-        viewreportscardLayout.setVerticalGroup(
-            viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(viewreportscardLayout.createSequentialGroup()
+        viewreportsempLayout.setVerticalGroup(
+            viewreportsempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportsempLayout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(btnsearch, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(viewreportmonth, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(viewreportyear, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(49, 49, 49)
+                .addGroup(viewreportsempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(viewreportempbtnsearch, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, viewreportsempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(viewreportempbranchname, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(60, 60, 60)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65)
-                .addComponent(btngeneratepdf, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addComponent(btngeneratereportemployeetable, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(168, Short.MAX_VALUE))
         );
 
-        jPanel3.add(viewreportscard, "viewreportscard");
+        jPanel3.add(viewreportsemp, "viewreportsemp");
 
         changesettingscard.setBackground(new java.awt.Color(204, 255, 204));
 
@@ -647,7 +722,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(settingsnun, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
                 .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         jPanel3.add(changesettingscard, "changesettingscard");
@@ -664,6 +739,17 @@ public class AppInterface extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tableuser);
 
+        btnbackaddreports1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnbackaddreports1.setText("Back");
+        btnbackaddreports1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackaddreports1ActionPerformed(evt);
+            }
+        });
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel29.setText("Employee Table");
+
         javax.swing.GroupLayout addusertableLayout = new javax.swing.GroupLayout(addusertable);
         addusertable.setLayout(addusertableLayout);
         addusertableLayout.setHorizontalGroup(
@@ -671,14 +757,27 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(addusertableLayout.createSequentialGroup()
                 .addGap(283, 283, 283)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1064, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addContainerGap(264, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addusertableLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addusertableLayout.createSequentialGroup()
+                        .addComponent(btnbackaddreports1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(695, 695, 695))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addusertableLayout.createSequentialGroup()
+                        .addComponent(jLabel29)
+                        .addGap(702, 702, 702))))
         );
         addusertableLayout.setVerticalGroup(
             addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addusertableLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(69, 69, 69)
+                .addComponent(jLabel29)
+                .addGap(55, 55, 55)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(284, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(btnbackaddreports1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(248, Short.MAX_VALUE))
         );
 
         jPanel3.add(addusertable, "addusertable");
@@ -698,6 +797,17 @@ public class AppInterface extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tableleave);
 
+        btnbackaddreports2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnbackaddreports2.setText("Back");
+        btnbackaddreports2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackaddreports2ActionPerformed(evt);
+            }
+        });
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel30.setText("Leaves Table");
+
         javax.swing.GroupLayout addleavetableLayout = new javax.swing.GroupLayout(addleavetable);
         addleavetable.setLayout(addleavetableLayout);
         addleavetableLayout.setHorizontalGroup(
@@ -705,14 +815,27 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(addleavetableLayout.createSequentialGroup()
                 .addGap(282, 282, 282)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1078, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addleavetableLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addleavetableLayout.createSequentialGroup()
+                        .addComponent(btnbackaddreports2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(678, 678, 678))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addleavetableLayout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addGap(709, 709, 709))))
         );
         addleavetableLayout.setVerticalGroup(
             addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addleavetableLayout.createSequentialGroup()
-                .addGap(143, 143, 143)
+                .addGap(76, 76, 76)
+                .addComponent(jLabel30)
+                .addGap(51, 51, 51)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addComponent(btnbackaddreports2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(248, Short.MAX_VALUE))
         );
 
         jPanel3.add(addleavetable, "addleavetable");
@@ -729,6 +852,17 @@ public class AppInterface extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(tableatt);
 
+        btnbackaddreports3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnbackaddreports3.setText("Back");
+        btnbackaddreports3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackaddreports3ActionPerformed(evt);
+            }
+        });
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel31.setText("Attendance Table");
+
         javax.swing.GroupLayout addattendancetableLayout = new javax.swing.GroupLayout(addattendancetable);
         addattendancetable.setLayout(addattendancetableLayout);
         addattendancetableLayout.setHorizontalGroup(
@@ -736,14 +870,27 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(addattendancetableLayout.createSequentialGroup()
                 .addGap(276, 276, 276)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1079, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addContainerGap(256, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addattendancetableLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(addattendancetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addattendancetableLayout.createSequentialGroup()
+                        .addComponent(btnbackaddreports3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(681, 681, 681))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addattendancetableLayout.createSequentialGroup()
+                        .addComponent(jLabel31)
+                        .addGap(694, 694, 694))))
         );
         addattendancetableLayout.setVerticalGroup(
             addattendancetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addattendancetableLayout.createSequentialGroup()
-                .addGap(137, 137, 137)
+                .addGap(72, 72, 72)
+                .addComponent(jLabel31)
+                .addGap(49, 49, 49)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(288, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(btnbackaddreports3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
         jPanel3.add(addattendancetable, "addattendancetable");
@@ -751,14 +898,7 @@ public class AppInterface extends javax.swing.JFrame {
         addnotes.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel21.setText("Enter Field Officer Programme");
-
-        jScrollPane5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-
-        addnote.setColumns(20);
-        addnote.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        addnote.setRows(5);
-        jScrollPane5.setViewportView(addnote);
+        jLabel21.setText("Field Officer Programme");
 
         btnaddnote.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnaddnote.setText("Add");
@@ -768,36 +908,566 @@ public class AppInterface extends javax.swing.JFrame {
             }
         });
 
+        btnbackaddreports4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnbackaddreports4.setText("Back");
+        btnbackaddreports4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackaddreports4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout addnotesLayout = new javax.swing.GroupLayout(addnotes);
         addnotes.setLayout(addnotesLayout);
         addnotesLayout.setHorizontalGroup(
             addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addnotesLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addnotesLayout.createSequentialGroup()
+                .addGap(0, 364, Short.MAX_VALUE)
+                .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 884, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(363, 363, 363))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addnotesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(addnotesLayout.createSequentialGroup()
-                        .addGap(614, 614, 614)
-                        .addComponent(jLabel21))
-                    .addGroup(addnotesLayout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 1124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(addnotesLayout.createSequentialGroup()
-                        .addGap(670, 670, 670)
-                        .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(234, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addnotesLayout.createSequentialGroup()
+                        .addComponent(jLabel21)
+                        .addGap(603, 603, 603))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addnotesLayout.createSequentialGroup()
+                        .addComponent(btnbackaddreports4, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(294, 294, 294)
+                        .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(451, 451, 451))))
         );
         addnotesLayout.setVerticalGroup(
             addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addnotesLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(67, 67, 67)
                 .addComponent(jLabel21)
-                .addGap(37, 37, 37)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnbackaddreports4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(250, Short.MAX_VALUE))
         );
 
         jPanel3.add(addnotes, "addnotes");
+
+        viewreportsatt.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel14.setText("Attendance Table");
+
+        viewreportsatttable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(viewreportsatttable);
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel35.setText("Month");
+
+        attablemonth.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        attablemonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January ", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel36.setText("Year");
+
+        attableyear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        attableyear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045" }));
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel37.setText("Branch Name");
+
+        attablebranch.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        attablebranch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ahangama", "Ahungalla", "Aluthwala", "Ambalangoda", "Ambana", "Baddegama", "Batapola", "Elpitiya", "Ethkandura", "Gonadeniya_Udugama", "Gonagala_Gonagalapura", "Karandeniya", "Keradewala", "Kodagoda_Imaduwa", "Koggala", "Labuduwa", "Nagoda_Ethumale", "Neluwa", "Niyagama", "Opatha", "Pahalagamhaya_Miriswaththa_Benthota", "Paragoda_Imaduwa", "Pilana", "Pinkanda", "Pitigala", "Rathgama", "Thawalama", "Uragasmanhandiya", "Urala_Wanduramba", "Walahanduwa", "Wanduramba", "Weragoda", "Yakkalamulla" }));
+
+        btnattablesearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnattablesearch.setText("Search");
+
+        btngeneratereportatttable.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btngeneratereportatttable.setText("Generate Report");
+
+        javax.swing.GroupLayout viewreportsattLayout = new javax.swing.GroupLayout(viewreportsatt);
+        viewreportsatt.setLayout(viewreportsattLayout);
+        viewreportsattLayout.setHorizontalGroup(
+            viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportsattLayout.createSequentialGroup()
+                .addGroup(viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(viewreportsattLayout.createSequentialGroup()
+                        .addGap(686, 686, 686)
+                        .addComponent(jLabel14))
+                    .addGroup(viewreportsattLayout.createSequentialGroup()
+                        .addGap(323, 323, 323)
+                        .addGroup(viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(viewreportsattLayout.createSequentialGroup()
+                                .addGroup(viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportsattLayout.createSequentialGroup()
+                                        .addComponent(jLabel35)
+                                        .addGap(71, 71, 71)
+                                        .addComponent(attablemonth, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(309, 309, 309)
+                                        .addComponent(jLabel36))
+                                    .addGroup(viewreportsattLayout.createSequentialGroup()
+                                        .addComponent(jLabel37)
+                                        .addGap(58, 58, 58)
+                                        .addComponent(attablebranch, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(56, 56, 56)
+                                .addGroup(viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(attableyear, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnattablesearch, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)))))
+                    .addGroup(viewreportsattLayout.createSequentialGroup()
+                        .addGap(633, 633, 633)
+                        .addComponent(btngeneratereportatttable, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(367, Short.MAX_VALUE))
+        );
+        viewreportsattLayout.setVerticalGroup(
+            viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportsattLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel14)
+                .addGap(26, 26, 26)
+                .addGroup(viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(attablemonth)
+                    .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(attableyear)
+                        .addComponent(jLabel36)))
+                .addGap(18, 18, 18)
+                .addGroup(viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnattablesearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(attablebranch)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74)
+                .addComponent(btngeneratereportatttable, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(170, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(viewreportsatt, "viewreportsatt");
+
+        viewreportsleave.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel32.setText("Leaves Table");
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel38.setText("Month");
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel39.setText("Branch Name");
+
+        leavetablebranch.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        leavetablebranch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ahangama", "Ahungalla", "Aluthwala", "Ambalangoda", "Ambana", "Baddegama", "Batapola", "Elpitiya", "Ethkandura", "Gonadeniya_Udugama", "Gonagala_Gonagalapura", "Karandeniya", "Keradewala", "Kodagoda_Imaduwa", "Koggala", "Labuduwa", "Nagoda_Ethumale", "Neluwa", "Niyagama", "Opatha", "Pahalagamhaya_Miriswaththa_Benthota", "Paragoda_Imaduwa", "Pilana", "Pinkanda", "Pitigala", "Rathgama", "Thawalama", "Uragasmanhandiya", "Urala_Wanduramba", "Walahanduwa", "Wanduramba", "Weragoda", "Yakkalamulla" }));
+
+        leavetablemonth.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        leavetablemonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January ", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+
+        jLabel40.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel40.setText("Year");
+
+        leavetableyear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        leavetableyear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045" }));
+
+        btnleavetablesearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnleavetablesearch.setText("Search");
+
+        viewreportsleavetable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane6.setViewportView(viewreportsleavetable);
+
+        btngeneratereportleavetable.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btngeneratereportleavetable.setText("Generate Report");
+
+        javax.swing.GroupLayout viewreportsleaveLayout = new javax.swing.GroupLayout(viewreportsleave);
+        viewreportsleave.setLayout(viewreportsleaveLayout);
+        viewreportsleaveLayout.setHorizontalGroup(
+            viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportsleaveLayout.createSequentialGroup()
+                .addContainerGap(347, Short.MAX_VALUE)
+                .addGroup(viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportsleaveLayout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addGap(707, 707, 707))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportsleaveLayout.createSequentialGroup()
+                        .addGroup(viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(viewreportsleaveLayout.createSequentialGroup()
+                                .addGroup(viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportsleaveLayout.createSequentialGroup()
+                                        .addComponent(jLabel38)
+                                        .addGap(71, 71, 71)
+                                        .addComponent(leavetablemonth, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(309, 309, 309)
+                                        .addComponent(jLabel40))
+                                    .addGroup(viewreportsleaveLayout.createSequentialGroup()
+                                        .addComponent(jLabel39)
+                                        .addGap(58, 58, 58)
+                                        .addComponent(leavetablebranch, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(56, 56, 56)
+                                .addGroup(viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(leavetableyear, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnleavetablesearch, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(343, 343, 343))))
+            .addGroup(viewreportsleaveLayout.createSequentialGroup()
+                .addGap(665, 665, 665)
+                .addComponent(btngeneratereportleavetable, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        viewreportsleaveLayout.setVerticalGroup(
+            viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportsleaveLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addComponent(jLabel32)
+                .addGap(18, 18, 18)
+                .addGroup(viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(leavetablemonth)
+                    .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(leavetableyear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel40)))
+                .addGap(18, 18, 18)
+                .addGroup(viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnleavetablesearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(leavetablebranch, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117)
+                .addComponent(btngeneratereportleavetable, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(143, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(viewreportsleave, "viewreportsleave");
+
+        viewreportscard.setBackground(new java.awt.Color(204, 255, 204));
+
+        btnviewempt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/viewreportbutton.png"))); // NOI18N
+        btnviewempt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnviewemptActionPerformed(evt);
+            }
+        });
+
+        viewfopt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/viewreportbutton.png"))); // NOI18N
+        viewfopt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewfoptActionPerformed(evt);
+            }
+        });
+
+        viewleat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/viewreportbutton.png"))); // NOI18N
+        viewleat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewleatActionPerformed(evt);
+            }
+        });
+
+        viewott.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/viewreportbutton.png"))); // NOI18N
+        viewott.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewottActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel23.setText("View Employee Table");
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel24.setText("View Attendance Table");
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel25.setText("View Leave Table");
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel26.setText("View OT Table");
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel27.setText("View Reports");
+
+        btnviewattt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/viewreportbutton.png"))); // NOI18N
+        btnviewattt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnviewatttActionPerformed(evt);
+            }
+        });
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel28.setText("View Field Officer Programmes");
+
+        javax.swing.GroupLayout viewreportscardLayout = new javax.swing.GroupLayout(viewreportscard);
+        viewreportscard.setLayout(viewreportscardLayout);
+        viewreportscardLayout.setHorizontalGroup(
+            viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportscardLayout.createSequentialGroup()
+                .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(viewreportscardLayout.createSequentialGroup()
+                        .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(viewreportscardLayout.createSequentialGroup()
+                                .addGap(129, 129, 129)
+                                .addComponent(btnviewempt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(63, 63, 63))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportscardLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel23)
+                                .addGap(79, 79, 79)))
+                        .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnviewattt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(viewreportscardLayout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(viewleat, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(57, 57, 57)
+                                .addComponent(viewott, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(viewreportscardLayout.createSequentialGroup()
+                                .addGap(103, 103, 103)
+                                .addComponent(jLabel25)
+                                .addGap(154, 154, 154)
+                                .addComponent(jLabel26))))
+                    .addGroup(viewreportscardLayout.createSequentialGroup()
+                        .addGap(719, 719, 719)
+                        .addComponent(jLabel27))
+                    .addGroup(viewreportscardLayout.createSequentialGroup()
+                        .addGap(656, 656, 656)
+                        .addComponent(viewfopt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(viewreportscardLayout.createSequentialGroup()
+                        .addGap(619, 619, 619)
+                        .addComponent(jLabel28)))
+                .addContainerGap(152, Short.MAX_VALUE))
+        );
+        viewreportscardLayout.setVerticalGroup(
+            viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportscardLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(viewreportscardLayout.createSequentialGroup()
+                        .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnviewattt, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(viewleat, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(viewott, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(viewfopt, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(viewreportscardLayout.createSequentialGroup()
+                        .addComponent(btnviewempt, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(102, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(viewreportscard, "viewreportscard");
+
+        viewreportsot.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel33.setText("Over  Time Table");
+
+        jLabel41.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel41.setText("Month");
+
+        ottablemonth.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ottablemonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January ", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel42.setText("Year");
+
+        ottableyear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ottableyear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045" }));
+
+        btnottablesearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnottablesearch.setText("Search");
+
+        ottablebranch.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ottablebranch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ahangama", "Ahungalla", "Aluthwala", "Ambalangoda", "Ambana", "Baddegama", "Batapola", "Elpitiya", "Ethkandura", "Gonadeniya_Udugama", "Gonagala_Gonagalapura", "Karandeniya", "Keradewala", "Kodagoda_Imaduwa", "Koggala", "Labuduwa", "Nagoda_Ethumale", "Neluwa", "Niyagama", "Opatha", "Pahalagamhaya_Miriswaththa_Benthota", "Paragoda_Imaduwa", "Pilana", "Pinkanda", "Pitigala", "Rathgama", "Thawalama", "Uragasmanhandiya", "Urala_Wanduramba", "Walahanduwa", "Wanduramba", "Weragoda", "Yakkalamulla" }));
+
+        jLabel43.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel43.setText("Branch Name");
+
+        viewreportsottable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane7.setViewportView(viewreportsottable);
+
+        btngeneratereportottable.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btngeneratereportottable.setText("Generate Report");
+
+        javax.swing.GroupLayout viewreportsotLayout = new javax.swing.GroupLayout(viewreportsot);
+        viewreportsot.setLayout(viewreportsotLayout);
+        viewreportsotLayout.setHorizontalGroup(
+            viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportsotLayout.createSequentialGroup()
+                .addContainerGap(707, Short.MAX_VALUE)
+                .addComponent(jLabel33)
+                .addGap(703, 703, 703))
+            .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(viewreportsotLayout.createSequentialGroup()
+                    .addGap(345, 345, 345)
+                    .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(viewreportsotLayout.createSequentialGroup()
+                                .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportsotLayout.createSequentialGroup()
+                                        .addComponent(jLabel41)
+                                        .addGap(71, 71, 71)
+                                        .addComponent(ottablemonth, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(309, 309, 309)
+                                        .addComponent(jLabel42))
+                                    .addGroup(viewreportsotLayout.createSequentialGroup()
+                                        .addComponent(jLabel43)
+                                        .addGap(58, 58, 58)
+                                        .addComponent(ottablebranch, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(56, 56, 56)
+                                .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(ottableyear, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnottablesearch, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))))
+                        .addGroup(viewreportsotLayout.createSequentialGroup()
+                            .addGap(310, 310, 310)
+                            .addComponent(btngeneratereportottable, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(345, Short.MAX_VALUE)))
+        );
+        viewreportsotLayout.setVerticalGroup(
+            viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewreportsotLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel33)
+                .addContainerGap(822, Short.MAX_VALUE))
+            .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(viewreportsotLayout.createSequentialGroup()
+                    .addGap(142, 142, 142)
+                    .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(ottablemonth)
+                        .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ottableyear)
+                            .addComponent(jLabel42)))
+                    .addGap(18, 18, 18)
+                    .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnottablesearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ottablebranch))
+                    .addGap(18, 18, 18)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(74, 74, 74)
+                    .addComponent(btngeneratereportottable, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(143, Short.MAX_VALUE)))
+        );
+
+        jPanel3.add(viewreportsot, "viewreportsot");
+
+        viewnotes.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel34.setText("Field Officer Programmes");
+
+        javax.swing.GroupLayout viewnotesLayout = new javax.swing.GroupLayout(viewnotes);
+        viewnotes.setLayout(viewnotesLayout);
+        viewnotesLayout.setHorizontalGroup(
+            viewnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewnotesLayout.createSequentialGroup()
+                .addContainerGap(676, Short.MAX_VALUE)
+                .addComponent(jLabel34)
+                .addGap(632, 632, 632))
+        );
+        viewnotesLayout.setVerticalGroup(
+            viewnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewnotesLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jLabel34)
+                .addContainerGap(827, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(viewnotes, "viewnotes");
+
+        addottable.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel44.setText("Over Time Table");
+
+        tableot.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane8.setViewportView(tableot);
+
+        btnbackaddreports5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnbackaddreports5.setText("Back");
+        btnbackaddreports5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackaddreports5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout addottableLayout = new javax.swing.GroupLayout(addottable);
+        addottable.setLayout(addottableLayout);
+        addottableLayout.setHorizontalGroup(
+            addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addottableLayout.createSequentialGroup()
+                .addGap(276, 276, 276)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 1079, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(256, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addottableLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addottableLayout.createSequentialGroup()
+                        .addComponent(btnbackaddreports5, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(681, 681, 681))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addottableLayout.createSequentialGroup()
+                        .addComponent(jLabel44)
+                        .addGap(694, 694, 694))))
+        );
+        addottableLayout.setVerticalGroup(
+            addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addottableLayout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(jLabel44)
+                .addGap(49, 49, 49)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(btnbackaddreports5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(251, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(addottable, "addottable");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -816,7 +1486,7 @@ public class AppInterface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 999, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1063, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -834,9 +1504,13 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btnviewreportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewreportsActionPerformed
         // TODO add your handling code here:
-        ServerController sc = new ServerController();
-        tablevr.setModel(DbUtils.resultSetToTableModel(sc.getAttList()));
+        if(branchname.equals("Head_Office") || branchname.equals("Branch_Office")){
+        /*ServerController sc = new ServerController();
+        tablevr.setModel(DbUtils.resultSetToTableModel(sc.getAttList()));*/
         viewPanel("viewreportscard");
+        }else{
+            JOptionPane.showMessageDialog(null, "Access Denied");
+        }
         
     }//GEN-LAST:event_btnviewreportsActionPerformed
 
@@ -857,9 +1531,15 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void mainmenuvrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainmenuvrActionPerformed
         // TODO add your handling code here:
-        ServerController sc = new ServerController();
-        tablevr.setModel(DbUtils.resultSetToTableModel(sc.getAttList()));
+        if(branchname.equals("Head_Office") || branchname.equals("Branch_Office")){
+        /*ServerController sc = new ServerController();
+        tablevr.setModel(DbUtils.resultSetToTableModel(sc.getAttList()));*/
         viewPanel("viewreportscard");
+        }else{
+            JOptionPane.showMessageDialog(null, "Access Denied");
+        }
+        
+                
     }//GEN-LAST:event_mainmenuvrActionPerformed
 
     private void mainmenuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainmenuarActionPerformed
@@ -945,19 +1625,19 @@ public class AppInterface extends javax.swing.JFrame {
         ss.insertLeaveList();
     }//GEN-LAST:event_btnaddleavetable1ActionPerformed
 
-    private void viewreportyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportyearActionPerformed
+    private void viewreportempbranchnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportempbranchnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_viewreportyearActionPerformed
+    }//GEN-LAST:event_viewreportempbranchnameActionPerformed
 
     private void btnaddnoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddnoteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnaddnoteActionPerformed
 
-    private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed
+    private void viewreportempbtnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportempbtnsearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnsearchActionPerformed
+    }//GEN-LAST:event_viewreportempbtnsearchActionPerformed
 
-    private void btngeneratepdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngeneratepdfActionPerformed
+    private void btngeneratereportemployeetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngeneratereportemployeetableActionPerformed
         // TODO add your handling code here:
         ServerController sms1 = new ServerController();
         String path = "";
@@ -999,7 +1679,62 @@ public class AppInterface extends javax.swing.JFrame {
         sms1.viewreportleave(path2);
         
         JOptionPane.showMessageDialog(rootPane, "Report Generated");
-    }//GEN-LAST:event_btngeneratepdfActionPerformed
+    }//GEN-LAST:event_btngeneratereportemployeetableActionPerformed
+
+    private void btnaddotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddotActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addottable");
+    }//GEN-LAST:event_btnaddotActionPerformed
+
+    private void btnviewemptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewemptActionPerformed
+        // TODO add your handling code here:
+        viewPanel("viewreportsemp");
+    }//GEN-LAST:event_btnviewemptActionPerformed
+
+    private void btnviewatttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewatttActionPerformed
+        // TODO add your handling code here:
+        viewPanel("viewreportsatt");
+    }//GEN-LAST:event_btnviewatttActionPerformed
+
+    private void viewleatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewleatActionPerformed
+        // TODO add your handling code here:
+        viewPanel("viewreportsleave");
+    }//GEN-LAST:event_viewleatActionPerformed
+
+    private void viewottActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewottActionPerformed
+        // TODO add your handling code here:
+        viewPanel("viewreportsot");
+    }//GEN-LAST:event_viewottActionPerformed
+
+    private void viewfoptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewfoptActionPerformed
+        // TODO add your handling code here:
+        viewPanel("viewnotes");
+    }//GEN-LAST:event_viewfoptActionPerformed
+
+    private void btnbackaddreports1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackaddreports1ActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addreportscard");
+    }//GEN-LAST:event_btnbackaddreports1ActionPerformed
+
+    private void btnbackaddreports2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackaddreports2ActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addreportscard");
+    }//GEN-LAST:event_btnbackaddreports2ActionPerformed
+
+    private void btnbackaddreports3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackaddreports3ActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addreportscard");
+    }//GEN-LAST:event_btnbackaddreports3ActionPerformed
+
+    private void btnbackaddreports4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackaddreports4ActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addreportscard");
+    }//GEN-LAST:event_btnbackaddreports4ActionPerformed
+
+    private void btnbackaddreports5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackaddreports5ActionPerformed
+        // TODO add your handling code here:
+        viewPanel("addreportscard");
+    }//GEN-LAST:event_btnbackaddreports5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1039,24 +1774,41 @@ public class AppInterface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addattendancetable;
     private javax.swing.JPanel addleavetable;
-    private javax.swing.JTextArea addnote;
     private javax.swing.JPanel addnotes;
+    private javax.swing.JPanel addottable;
     private javax.swing.JPanel addreportscard;
     private javax.swing.JPanel addusertable;
+    private javax.swing.JComboBox<String> attablebranch;
+    private javax.swing.JComboBox<String> attablemonth;
+    private javax.swing.JComboBox<String> attableyear;
     private javax.swing.JButton btnaddattendancetable;
     private javax.swing.JButton btnaddleavetable1;
     private javax.swing.JButton btnaddnote;
     private javax.swing.JButton btnaddnotes;
+    private javax.swing.JButton btnaddot;
     private javax.swing.JButton btnaddreports;
     private javax.swing.JButton btnaddusertable;
+    private javax.swing.JButton btnattablesearch;
+    private javax.swing.JButton btnbackaddreports1;
+    private javax.swing.JButton btnbackaddreports2;
+    private javax.swing.JButton btnbackaddreports3;
+    private javax.swing.JButton btnbackaddreports4;
+    private javax.swing.JButton btnbackaddreports5;
     private javax.swing.JButton btnchangesettings;
     private javax.swing.JButton btnconfirm;
-    private javax.swing.JButton btngeneratepdf;
+    private javax.swing.JButton btngeneratereportatttable;
+    private javax.swing.JButton btngeneratereportemployeetable;
+    private javax.swing.JButton btngeneratereportleavetable;
+    private javax.swing.JButton btngeneratereportottable;
+    private javax.swing.JButton btnleavetablesearch;
     private javax.swing.JButton btnmainmenu;
-    private javax.swing.JButton btnsearch;
+    private javax.swing.JButton btnottablesearch;
+    private javax.swing.JButton btnviewattt;
+    private javax.swing.JButton btnviewempt;
     private javax.swing.JButton btnviewreports;
     private javax.swing.JPanel changesettingscard;
     private javax.swing.JButton jButton1;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1071,8 +1823,31 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1086,10 +1861,19 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JComboBox<String> leavetablebranch;
+    private javax.swing.JComboBox<String> leavetablemonth;
+    private javax.swing.JComboBox<String> leavetableyear;
     private javax.swing.JButton mainmenuar;
     private javax.swing.JPanel mainmenucard;
     private javax.swing.JButton mainmenuvr;
+    private javax.swing.JComboBox<String> ottablebranch;
+    private javax.swing.JComboBox<String> ottablemonth;
+    private javax.swing.JComboBox<String> ottableyear;
     private javax.swing.JPasswordField settingscpw;
     private javax.swing.JTextField settingsnpw;
     private javax.swing.JTextField settingsnun;
@@ -1097,11 +1881,23 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JTextField settingsun;
     private javax.swing.JTable tableatt;
     private javax.swing.JTable tableleave;
+    private javax.swing.JTable tableot;
     private javax.swing.JTable tableuser;
-    private javax.swing.JTable tablevr;
-    private javax.swing.JComboBox<String> viewreportmonth;
+    private javax.swing.JButton viewfopt;
+    private javax.swing.JButton viewleat;
+    private javax.swing.JPanel viewnotes;
+    private javax.swing.JButton viewott;
+    private javax.swing.JComboBox<String> viewreportempbranchname;
+    private javax.swing.JButton viewreportempbtnsearch;
+    private javax.swing.JTable viewreportemptable;
+    private javax.swing.JPanel viewreportsatt;
+    private javax.swing.JTable viewreportsatttable;
     private javax.swing.JPanel viewreportscard;
-    private javax.swing.JComboBox<String> viewreportyear;
+    private javax.swing.JPanel viewreportsemp;
+    private javax.swing.JPanel viewreportsleave;
+    private javax.swing.JTable viewreportsleavetable;
+    private javax.swing.JPanel viewreportsot;
+    private javax.swing.JTable viewreportsottable;
     // End of variables declaration//GEN-END:variables
 
    

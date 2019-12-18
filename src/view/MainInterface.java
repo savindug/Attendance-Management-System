@@ -71,7 +71,7 @@ public class MainInterface extends javax.swing.JFrame {
 
         loginbranch.setBackground(new java.awt.Color(204, 255, 204));
         loginbranch.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        loginbranch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ahangama", "Ahungalla", "Aluthwala", "Ambalangoda", "Ambana", "Baddegama", "Batapola", "Elpitiya", "Ethkandura", "Gonadeniya_Udugama", "Gonagala_Gonagalapura", "Karandeniya", "Keradewala", "Kodagoda_Imaduwa", "Koggala", "Labuduwa", "Nagoda_Ethumale", "Neluwa", "Niyagama", "Opatha", "Pahalagamhaya_Miriswaththa_Benthota", "Paragoda_Imaduwa", "Pilana", "Pinkanda", "Pitigala", "Rathgama", "Thawalama", "Uragasmanhandiya", "Urala_Wanduramba", "Walahanduwa", "Wanduramba", "Weragoda", "Yakkalamulla" }));
+        loginbranch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Head_Office", "District_Office", "Ahangama", "Ahungalla", "Aluthwala", "Ambalangoda", "Ambana", "Baddegama", "Batapola", "Elpitiya", "Ethkandura", "Gonadeniya_Udugama", "Gonagala_Gonagalapura", "Karandeniya", "Keradewala", "Kodagoda_Imaduwa", "Koggala", "Labuduwa", "Nagoda_Ethumale", "Neluwa", "Niyagama", "Opatha", "Pahalagamhaya_Miriswaththa_Benthota", "Paragoda_Imaduwa", "Pilana", "Pinkanda", "Pitigala", "Rathgama", "Thawalama", "Uragasmanhandiya", "Urala_Wanduramba", "Walahanduwa", "Wanduramba", "Weragoda", "Yakkalamulla" }));
         loginbranch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginbranchActionPerformed(evt);
@@ -106,7 +106,7 @@ public class MainInterface extends javax.swing.JFrame {
                             .addComponent(loginun, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(loginbranch, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(loginerror, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(556, Short.MAX_VALUE))
+                .addContainerGap(410, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,7 +127,7 @@ public class MainInterface extends javax.swing.JFrame {
                 .addComponent(btnlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(loginerror, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(481, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

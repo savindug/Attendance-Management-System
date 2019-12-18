@@ -71,7 +71,7 @@
                       </Group>
                       <Component id="loginerror" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="556" max="32767" attributes="0"/>
+                  <EmptySpace pref="410" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -97,7 +97,7 @@
                   <Component id="btnlogin" min="-2" pref="69" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="loginerror" min="-2" pref="68" max="-2" attributes="0"/>
-                  <EmptySpace pref="481" max="32767" attributes="0"/>
+                  <EmptySpace pref="189" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -161,40 +161,42 @@
               <Font name="Tahoma" size="36" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="33">
-                <StringItem index="0" value="Ahangama"/>
-                <StringItem index="1" value="Ahungalla"/>
-                <StringItem index="2" value="Aluthwala"/>
-                <StringItem index="3" value="Ambalangoda"/>
-                <StringItem index="4" value="Ambana"/>
-                <StringItem index="5" value="Baddegama"/>
-                <StringItem index="6" value="Batapola"/>
-                <StringItem index="7" value="Elpitiya"/>
-                <StringItem index="8" value="Ethkandura"/>
-                <StringItem index="9" value="Gonadeniya_Udugama"/>
-                <StringItem index="10" value="Gonagala_Gonagalapura"/>
-                <StringItem index="11" value="Karandeniya"/>
-                <StringItem index="12" value="Keradewala"/>
-                <StringItem index="13" value="Kodagoda_Imaduwa"/>
-                <StringItem index="14" value="Koggala"/>
-                <StringItem index="15" value="Labuduwa"/>
-                <StringItem index="16" value="Nagoda_Ethumale"/>
-                <StringItem index="17" value="Neluwa"/>
-                <StringItem index="18" value="Niyagama"/>
-                <StringItem index="19" value="Opatha"/>
-                <StringItem index="20" value="Pahalagamhaya_Miriswaththa_Benthota"/>
-                <StringItem index="21" value="Paragoda_Imaduwa"/>
-                <StringItem index="22" value="Pilana"/>
-                <StringItem index="23" value="Pinkanda"/>
-                <StringItem index="24" value="Pitigala"/>
-                <StringItem index="25" value="Rathgama"/>
-                <StringItem index="26" value="Thawalama"/>
-                <StringItem index="27" value="Uragasmanhandiya"/>
-                <StringItem index="28" value="Urala_Wanduramba"/>
-                <StringItem index="29" value="Walahanduwa"/>
-                <StringItem index="30" value="Wanduramba"/>
-                <StringItem index="31" value="Weragoda"/>
-                <StringItem index="32" value="Yakkalamulla"/>
+              <StringArray count="35">
+                <StringItem index="0" value="Head_Office"/>
+                <StringItem index="1" value="District_Office"/>
+                <StringItem index="2" value="Ahangama"/>
+                <StringItem index="3" value="Ahungalla"/>
+                <StringItem index="4" value="Aluthwala"/>
+                <StringItem index="5" value="Ambalangoda"/>
+                <StringItem index="6" value="Ambana"/>
+                <StringItem index="7" value="Baddegama"/>
+                <StringItem index="8" value="Batapola"/>
+                <StringItem index="9" value="Elpitiya"/>
+                <StringItem index="10" value="Ethkandura"/>
+                <StringItem index="11" value="Gonadeniya_Udugama"/>
+                <StringItem index="12" value="Gonagala_Gonagalapura"/>
+                <StringItem index="13" value="Karandeniya"/>
+                <StringItem index="14" value="Keradewala"/>
+                <StringItem index="15" value="Kodagoda_Imaduwa"/>
+                <StringItem index="16" value="Koggala"/>
+                <StringItem index="17" value="Labuduwa"/>
+                <StringItem index="18" value="Nagoda_Ethumale"/>
+                <StringItem index="19" value="Neluwa"/>
+                <StringItem index="20" value="Niyagama"/>
+                <StringItem index="21" value="Opatha"/>
+                <StringItem index="22" value="Pahalagamhaya_Miriswaththa_Benthota"/>
+                <StringItem index="23" value="Paragoda_Imaduwa"/>
+                <StringItem index="24" value="Pilana"/>
+                <StringItem index="25" value="Pinkanda"/>
+                <StringItem index="26" value="Pitigala"/>
+                <StringItem index="27" value="Rathgama"/>
+                <StringItem index="28" value="Thawalama"/>
+                <StringItem index="29" value="Uragasmanhandiya"/>
+                <StringItem index="30" value="Urala_Wanduramba"/>
+                <StringItem index="31" value="Walahanduwa"/>
+                <StringItem index="32" value="Wanduramba"/>
+                <StringItem index="33" value="Weragoda"/>
+                <StringItem index="34" value="Yakkalamulla"/>
               </StringArray>
             </Property>
           </Properties>
