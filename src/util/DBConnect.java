@@ -22,7 +22,7 @@ public class DBConnect {
     public static Connection connect(){
         
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/emp", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/kYYREuLXgx", "kYYREuLXgx", "Ivw9uq1gro");
             System.out.println("Database Connected!");
                     
                     } catch (SQLException ex) {
