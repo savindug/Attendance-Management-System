@@ -68,6 +68,8 @@ public class Controller {
                      "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
                      "  where d.DeptId = u.DeptId and u.UID = a.ID ";
                      //"  order by usr.PIN";
+//                     
+                     //String sql = "select * from ras_AttRecord group by pin";
             
             try{
                 connection = DBConnection.openConnection();

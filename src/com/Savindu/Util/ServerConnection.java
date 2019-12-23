@@ -17,13 +17,13 @@ import java.sql.SQLException;
 public class ServerConnection {
     
         
-	private static final String URL = "jdbc:mysql://213.136.89.67:3306/southnet_Attendance_Management";
+	private static final String URL = "jdbc:mysql://remotemysql.com:3306/kYYREuLXgx";
 	
-	private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	private static final String DRIVER = "com.mysql.jdbc.Driver";
 	
-	private static final String USERNAME = "southnet_App";
+	private static final String USERNAME = "kYYREuLXgx";
 	
-	private static final String PASSWORD = "#Admin@98";
+	private static final String PASSWORD = "Ivw9uq1gro";
 	
 	private static Connection connection = null;
 	

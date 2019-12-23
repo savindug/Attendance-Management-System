@@ -206,10 +206,12 @@ public class empservice {
         ResultSet rs = null;
         Statement st = null;
         
-        String sql = "  select u.PIN, u.UserName, d.DeptName, a.Clock, a.Remark  from \n" +
-                     "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
-                     "  where d.DeptId = u.DeptId and u.UID = a.ID ";
-                     //"  order by usr.PIN";
+//        String sql = "  select u.PIN, u.UserName, d.DeptName, a.Clock, a.Remark  from \n" +
+//                     "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
+//                     "  where d.DeptId = u.DeptId and u.UID = a.ID ";
+//                     //"  order by usr.PIN";
+                     
+                     String sql = "select * from ras_AttRecord";
             
             try{
                 connection = DBConnection.openConnection();
