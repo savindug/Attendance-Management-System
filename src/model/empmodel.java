@@ -18,17 +18,50 @@ public class empmodel {
     private String password;    
     private String newpassword;
     private String newusername;
+    private String searchbranchname;
+    private String searchyear;
+    private String searchmonth;
+
+    
+    
 
    
      public empmodel() {
     }
     
-    public empmodel(String branchname, String username, String password, String newpassword, String newusername) {
+    public empmodel(String branchname, String username, String password, String newpassword, String newusername, String searchbranchname, String searchyear, String searchmonth) {
         this.branchname = branchname;
         this.username = username;
         this.password = password;
         this.newpassword = newpassword;
         this.newusername = newusername;
+        this.searchbranchname = searchbranchname;
+        this.searchmonth= searchmonth;
+        this.searchyear = searchyear;
+    }
+    
+    public String getSearchbranchname() {
+        return searchbranchname;
+    }
+
+    public void setSearchbranchname(String searchbranchname) {
+        this.searchbranchname = searchbranchname;
+    }
+
+    public String getSearchyear() {
+        return searchyear;
+    }
+
+    public void setSearchyear(String searchyear) {
+        this.searchyear = searchyear;
+    }
+
+    public String getSearchmonth() {
+        return searchmonth;
+    }
+
+    public void setSearchmonth(String searchmonth) {
+        this.searchmonth = searchmonth;
     }
     
     public String getNewpassword() {

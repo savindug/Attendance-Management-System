@@ -64,7 +64,7 @@ public class Controller {
        Attendance att;
         ArrayList<Attendance> attL = new ArrayList<>();
         
-        String sql = "  select u.PIN, u.UserName, d.DeptName, a.Clock, a.Remark  from \n" +
+        String sql = "  select * from \n" +
                      "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
                      "  where d.DeptId = u.DeptId and u.UID = a.ID ";
                      //"  order by usr.PIN";

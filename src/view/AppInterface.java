@@ -256,7 +256,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(btnviewreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnaddreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnmainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1597,7 +1597,7 @@ public class AppInterface extends javax.swing.JFrame {
         tableuser.setModel(DbUtils.resultSetToTableModel(es.getemployees()));
         viewPanel("addusertable");
         ServerController ss = new ServerController();
-        ss.insertUserList();
+        ss.insertUserList(branchname);
     }//GEN-LAST:event_btnaddusertableActionPerformed
 
     private void btnaddattendancetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddattendancetableActionPerformed
@@ -1620,7 +1620,7 @@ public class AppInterface extends javax.swing.JFrame {
         tableleave.setModel(DbUtils.resultSetToTableModel(es.getleave()));
         viewPanel("addleavetable");
         ServerController ss = new ServerController();
-        ss.insertLeaveList();
+        ss.insertLeaveList(branchname);
     }//GEN-LAST:event_btnaddleavetable1ActionPerformed
 
     private void viewreportempbranchnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportempbranchnameActionPerformed
@@ -1633,6 +1633,12 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void viewreportempbtnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportempbtnsearchActionPerformed
         // TODO add your handling code here:
+        String sbranch = (String)viewreportempbranchname.getSelectedItem();
+        empmodel em = new empmodel();
+        em.setSearchbranchname(sbranch);
+        empservice es = new empservice();
+        viewreportemptable.setModel(DbUtils.resultSetToTableModel(es.viewemployees(em)));
+        
     }//GEN-LAST:event_viewreportempbtnsearchActionPerformed
 
     private void btngeneratereportemployeetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngeneratereportemployeetableActionPerformed

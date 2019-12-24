@@ -22,8 +22,13 @@ public class DBConnect {
     public static Connection connect(){
         
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/kYYREuLXgx", "kYYREuLXgx", "Ivw9uq1gro");
+            /*conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/kYYREuLXgx", "kYYREuLXgx", "Ivw9uq1gro");
+            System.out.println("Database Connected!");*/
+            
+            conn = DriverManager.getConnection("jdbc:mysql://johnny.heliohost.org:3306/nwsb_att_sys", "nwsb", "nw2251997");
             System.out.println("Database Connected!");
+             
+           
                     
                     } catch (SQLException ex) {
             Logger.getLogger(DBConnect.class.getName()).log(Level.SEVERE, null, ex);

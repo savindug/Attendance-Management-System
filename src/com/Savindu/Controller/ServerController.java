@@ -38,15 +38,15 @@ public class ServerController {
         
    
         
-        public void insertUserList(){
-      
+        public void insertUserList(String Branchname){
+            /*New Modifications done by Nuwanga, Repeats will not be repeated. Branch name will also be saved. Online table modified accordingly*/
             ArrayList<User> uList = new ArrayList<>();
             Controller ut = new Controller();
             uList = ut.userList();
 
             String INSERT_USERS_SQL = "INSERT INTO Employees" +
-            "  (userId, UserName, Gender, CreateDate) VALUES " +
-            " (?, ?, ?, ?);";
+            "  (userId, UserName, Gender, CreateDate, branchName) VALUES " +
+            " (?, ?, ?, ?,?);";
     
             try{
                 connection = ServerConnection.openConnection();
@@ -58,6 +58,7 @@ public class ServerController {
                     preparedStatement.setString(2, uList.get(i).getuName().toString());
                     preparedStatement.setString(3, uList.get(i).getGender().toString());
                     preparedStatement.setString(4, uList.get(i).getCreateDate().toString());
+                    preparedStatement.setString(5, Branchname);
 
                      System.out.println(preparedStatement);
                     // Step 3: Execute the query or update query
@@ -70,8 +71,8 @@ public class ServerController {
                     }
 
             }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, e);
-                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "No New Records to Update");
+                    
                 }
 
     }
@@ -300,11 +301,7 @@ public class ServerController {
             //cell.setBackgroundColor(BaseColor.BLUE);
             table.addCell(cell5);
             
-           
-            
-            
-            
-            
+
             String sql = "SELECT pin, uname, depart, clock, remark\n" +
                                 "from attendnce";
            connection = ServerConnection.openConnection();
@@ -331,10 +328,7 @@ public class ServerController {
         }
 
          }
-            
-            
-            
-            
+  
             
              public ResultSet getAttList(){
                
@@ -361,15 +355,15 @@ public class ServerController {
         
          }
 
-                public void insertLeaveList(){
-      
+                public void insertLeaveList(String BranchName){
+                    
             ArrayList<User> leaveL = new ArrayList<>();
             Controller ut = new Controller();
             leaveL = ut.leaveList();
 
-            String INSERT_USERS_SQL = "INSERT INTO leaves" +
-            "  (pin, uname, fromDtae, toDate, leaveSubmitted) VALUES " +
-            " (?, ?, ?, ?, ?);";
+            String INSERT_USERS_SQL = "INSERT INTO Leaves" +
+            "  (userId, userName, fromDtae, toDate, submittedDate, branchName) VALUES " +
+            " (?, ?, ?, ?, ?,?);";
     
             try{
                 connection = ServerConnection.openConnection();
@@ -382,6 +376,7 @@ public class ServerController {
                     preparedStatement.setString(3, leaveL.get(i).getLeaveStart().toString());
                     preparedStatement.setString(4, leaveL.get(i).getLeaveEnd().toString());
                     preparedStatement.setString(5, leaveL.get(i).getLeaveSubmitted().toString());
+                    preparedStatement.setString(6, BranchName);
 
                      System.out.println(preparedStatement);
                     // Step 3: Execute the query or update query
@@ -394,8 +389,8 @@ public class ServerController {
                     }
 
             }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, e);
-                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Records Successfully Updated!");
+                   
                 }
 
     }

@@ -149,6 +149,27 @@ public class empservice {
          
      }
      
+     
+     public ResultSet viewemployees(empmodel em){
+         
+        con = DBConnect.connect();
+       
+        ResultSet rs = null;
+        
+        try {           
+            
+            ps = con.prepareStatement("Select userId, UserName, Gender, CreateDate, branchName from Employees where branchname = ? Order by userId");
+            ps.setString(1, em.getSearchbranchname());
+            rs = ps.executeQuery();
+            
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return rs;
+         
+     }
+     
      public ResultSet getemployees(){
         Connection connection = null;
         ResultSet rs = null;
@@ -206,12 +227,12 @@ public class empservice {
         ResultSet rs = null;
         Statement st = null;
         
-//        String sql = "  select u.PIN, u.UserName, d.DeptName, a.Clock, a.Remark  from \n" +
-//                     "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
-//                     "  where d.DeptId = u.DeptId and u.UID = a.ID ";
-//                     //"  order by usr.PIN";
+      String sql = "  select u.PIN, u.UserName, d.DeptName, a.Clock, a.Remark  from \n" +
+                    "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
+                  "  where d.DeptId = u.DeptId and u.UID = a.ID ";
+                    /*"  order by usr.PIN";*/
                      
-                     String sql = "select * from ras_AttRecord";
+                    /* String sql = "select * from ras_AttRecord";*/
             
             try{
                 connection = DBConnection.openConnection();
