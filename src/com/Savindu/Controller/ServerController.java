@@ -74,7 +74,7 @@ public class ServerController {
                     JOptionPane.showMessageDialog(null, "Records Updated!");
                     
                 }
-             try { connection.close(); } catch (Exception e) { /* ignored */ }
+            
 
     }
         
@@ -100,7 +100,7 @@ public class ServerController {
                        JOptionPane.showMessageDialog(null, e);
                        e.printStackTrace();
                    }
-                   try { connection.close(); } catch (Exception e) { /* ignored */ }
+                  
 
                return rs;
         }        
@@ -191,7 +191,7 @@ public class ServerController {
             
         } catch (Exception e) {
 
-        }try { connection.close(); } catch (Exception e) { /* ignored */ }
+        }
 
          }
         
@@ -237,7 +237,7 @@ public class ServerController {
                     JOptionPane.showMessageDialog(null, e);
                     e.printStackTrace();
                 }
-            try { connection.close(); } catch (Exception e) { /* ignored */ }
+           
 
     }
             
@@ -335,7 +335,7 @@ public class ServerController {
         } catch (Exception e) {
 
         }
-            try { connection.close(); } catch (Exception e) { /* ignored */ }
+            
 
          }
   
@@ -379,7 +379,7 @@ public class ServerController {
                     JOptionPane.showMessageDialog(null, "Records Updated!");
                    
                 }
-            try { connection.close(); } catch (Exception e) { /* ignored */ }
+            
 
     }
                 
@@ -480,7 +480,7 @@ public class ServerController {
         } catch (Exception e) {
 
         }
-               try { connection.close(); } catch (Exception e) { /* ignored */ }
+               
          }
 //                
 //                public void displayLeaveList(){
