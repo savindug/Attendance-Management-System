@@ -19,11 +19,20 @@ public class User {
     private String leaveEnd;
     private String leaveSubmitted;
     private String leaveRemark;
+    private String userdepart;
     
     public User() {
        
     }
 
+    public String getUserdepart() {
+        return userdepart;
+    }
+
+    public void setUserdepart(String userdepart) {
+        this.userdepart = userdepart;
+    }
+    
     public void setuName(String uName) {
         this.uName = uName;
     }

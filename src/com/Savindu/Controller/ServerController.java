@@ -45,7 +45,7 @@ public class ServerController {
             uList = ut.userList();
 
             String INSERT_USERS_SQL = "INSERT INTO Employees" +
-            "  (userId, UserName, Gender, CreateDate, branchName) VALUES " +
+            "  (userId, UserName, Gender, deptName, branchName) VALUES " +
             " (?, ?, ?, ?,?);";
     
             try{
@@ -57,7 +57,7 @@ public class ServerController {
                     preparedStatement.setString(1, uList.get(i).getuID().toString());
                     preparedStatement.setString(2, uList.get(i).getuName().toString());
                     preparedStatement.setString(3, uList.get(i).getGender().toString());
-                    preparedStatement.setString(4, uList.get(i).getCreateDate().toString());
+                    preparedStatement.setString(4, uList.get(i).getUserdepart().toString());
                     preparedStatement.setString(5, Branchname);
 
                      System.out.println(preparedStatement);
@@ -67,13 +67,14 @@ public class ServerController {
                  }
                  
                   if(result > 0){
-                        JOptionPane.showMessageDialog(null, "Records Successfully Updated!");
+                        JOptionPane.showMessageDialog(null, "Records Updated!");
                     }
 
             }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, "No New Records to Update");
+                    JOptionPane.showMessageDialog(null, "Records Updated!");
                     
                 }
+             try { connection.close(); } catch (Exception e) { /* ignored */ }
 
     }
         
@@ -99,6 +100,7 @@ public class ServerController {
                        JOptionPane.showMessageDialog(null, e);
                        e.printStackTrace();
                    }
+                   try { connection.close(); } catch (Exception e) { /* ignored */ }
 
                return rs;
         }        
@@ -189,19 +191,19 @@ public class ServerController {
             
         } catch (Exception e) {
 
-        }
+        }try { connection.close(); } catch (Exception e) { /* ignored */ }
 
          }
         
-            public void insertAttList(){
+            public void insertAttList(String BranchName){
       
             ArrayList<Attendance> attL = new ArrayList<>();
             Controller ut = new Controller();
             attL = ut.getattL();
 
-            String INSERT_USERS_SQL = "INSERT INTO attendnce" +
-            "  (pin, uname, depart, clock, remark) VALUES " +
-            " (?, ?, ?, ?, ?);";
+            String INSERT_USERS_SQL = "INSERT INTO Attendance" +
+            "  (userId, userName, clock, remarks, branchName) VALUES " +
+            " (?, ?, ?,?, ?);";
     
             try{
                 connection = ServerConnection.openConnection();
@@ -211,9 +213,15 @@ public class ServerController {
 
                     preparedStatement.setString(1, attL.get(i).getuId().toString());
                     preparedStatement.setString(2, attL.get(i).getuName().toString());
-                    preparedStatement.setString(3, attL.get(i).getDepart().toString());
-                    preparedStatement.setString(4, attL.get(i).getAttTime().toString());
-                    preparedStatement.setString(5, attL.get(i).getRemark().toString());
+                    preparedStatement.setString(3, attL.get(i).getAttTime().toString());
+                    preparedStatement.setString(4, attL.get(i).getRemark().toString());
+                    preparedStatement.setString(5, BranchName);
+                   
+                    /*preparedStatement.setString(1, "23");
+                    preparedStatement.setString(2, "fd");
+                    preparedStatement.setString(3, "342");
+                    preparedStatement.setString(4, "re");
+                    preparedStatement.setString(5, BranchName);*/
 
                      System.out.println(preparedStatement);
                     // Step 3: Execute the query or update query
@@ -229,6 +237,7 @@ public class ServerController {
                     JOptionPane.showMessageDialog(null, e);
                     e.printStackTrace();
                 }
+            try { connection.close(); } catch (Exception e) { /* ignored */ }
 
     }
             
@@ -326,34 +335,11 @@ public class ServerController {
         } catch (Exception e) {
 
         }
+            try { connection.close(); } catch (Exception e) { /* ignored */ }
 
          }
   
-            
-             public ResultSet getAttList(){
-               
-               Connection connection = null;
-               ResultSet rs = null;
-               Statement st = null;
-
-               String sql = "select * from attendnce group by pin";
-
-                   try{
-                       connection = ServerConnection.openConnection();
-                       st = connection.createStatement();
-                       rs = st.executeQuery(sql);
-
-                       System.out.println("success attendance record retrive");
-
-
-                   }catch(Exception e){
-                       JOptionPane.showMessageDialog(null, e);
-                       e.printStackTrace();
-                   }
-
-               return rs;
-        
-         }
+           
 
                 public void insertLeaveList(String BranchName){
                     
@@ -362,8 +348,8 @@ public class ServerController {
             leaveL = ut.leaveList();
 
             String INSERT_USERS_SQL = "INSERT INTO Leaves" +
-            "  (userId, userName, fromDtae, toDate, submittedDate, branchName) VALUES " +
-            " (?, ?, ?, ?, ?,?);";
+            "  (userId, userName, fromDtae, toDate, submittedDate, branchName, remarks) VALUES " +
+            " (?, ?, ?, ?, ?,?,?);";
     
             try{
                 connection = ServerConnection.openConnection();
@@ -377,6 +363,7 @@ public class ServerController {
                     preparedStatement.setString(4, leaveL.get(i).getLeaveEnd().toString());
                     preparedStatement.setString(5, leaveL.get(i).getLeaveSubmitted().toString());
                     preparedStatement.setString(6, BranchName);
+                    preparedStatement.setString(7, leaveL.get(i).getLeaveRemark().toString());
 
                      System.out.println(preparedStatement);
                     // Step 3: Execute the query or update query
@@ -385,13 +372,14 @@ public class ServerController {
                  }
                  
                   if(result > 0){
-                        JOptionPane.showMessageDialog(null, "Records Successfully Updated!");
+                        JOptionPane.showMessageDialog(null, "Records Updated!");
                     }
 
             }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, "Records Successfully Updated!");
+                    JOptionPane.showMessageDialog(null, "Records Updated!");
                    
                 }
+            try { connection.close(); } catch (Exception e) { /* ignored */ }
 
     }
                 
@@ -492,7 +480,7 @@ public class ServerController {
         } catch (Exception e) {
 
         }
-
+               try { connection.close(); } catch (Exception e) { /* ignored */ }
          }
 //                
 //                public void displayLeaveList(){

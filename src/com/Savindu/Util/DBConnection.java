@@ -41,6 +41,7 @@ public static Connection openConnection() {
 		try {
 			
 			Class.forName(DRIVER);
+                        
 			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
                         
                         if(connection != null) {

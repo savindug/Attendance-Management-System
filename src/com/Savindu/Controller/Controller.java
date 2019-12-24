@@ -27,7 +27,9 @@ public class Controller {
         User user;
         
         //sql query
-        String sql = "select * from ras_Users";
+        String sql = "select u.PIN, u.UserName, u.Sex, d.DeptName \n"
+                + "from ras_Users u, ras_Dept d \n"
+                + "where d.DeptId = u.DeptId";
             
             try{
                 connection = DBConnection.openConnection();
@@ -39,13 +41,13 @@ public class Controller {
                 System.out.println("");
                 while(rs.next()){
                     user = new User();
-                    user.setuID(rs.getString(3));
-                    user.setuName(rs.getString(4));
-                    user.setGender(rs.getString(5));
-                    user.setCreateDate(rs.getString(11));
-                    user.setLastLoggedIn(rs.getString(12));
+                    user.setuID(rs.getString(1));
+                    user.setuName(rs.getString(2));
+                    user.setGender(rs.getString(3));
+                    user.setUserdepart(rs.getString(4));
+                    
                     userList.add(user);
-                    System.out.println(user.getuID()+"\t\t"+user.getuName()+"\t\t"+user.getGender()+"\t\t"+user.getCreateDate()+"\t\t"+user.getLastLoggedIn());
+                    
 
                 }
 
@@ -64,7 +66,7 @@ public class Controller {
        Attendance att;
         ArrayList<Attendance> attL = new ArrayList<>();
         
-        String sql = "  select * from \n" +
+        String sql = "  select u.PIN, u.UserName, a.Clock, a.Remark from \n" +
                      "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
                      "  where d.DeptId = u.DeptId and u.UID = a.ID ";
                      //"  order by usr.PIN";
@@ -80,9 +82,9 @@ public class Controller {
                     att = new Attendance();
                     att.setuId(rs.getString(1));
                     att.setuName(rs.getString(2));
-                    att.setDepart(rs.getString(3));
-                    att.setAttTime(rs.getString(4));
-                    att.setRemark(rs.getString(5));
+                   
+                    att.setAttTime(rs.getString(3));
+                    att.setRemark(rs.getString(4));
                     attL.add(att);
                     //System.out.println(user.getuID()+"\t\t"+user.getuName()+"\t\t"+user.getGender()+"\t\t"+user.getCreateDate()+"\t\t"+user.getLastLoggedIn());
 

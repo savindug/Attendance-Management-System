@@ -42,6 +42,7 @@ public static Connection openConnection() {
 		try {
 			
 			Class.forName(DRIVER);
+                        DriverManager.setLoginTimeout(120);
 			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
                         
                         if(connection != null) {

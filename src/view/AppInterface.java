@@ -1606,7 +1606,7 @@ public class AppInterface extends javax.swing.JFrame {
         tableatt.setModel(DbUtils.resultSetToTableModel(es.getatt()));
         viewPanel("addattendancetable");
         ServerController ss = new ServerController();
-        ss.insertAttList();
+        ss.insertAttList(branchname);
     }//GEN-LAST:event_btnaddattendancetableActionPerformed
 
     private void btnaddnotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddnotesActionPerformed

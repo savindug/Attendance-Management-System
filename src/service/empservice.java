@@ -59,6 +59,7 @@ public class empservice {
         } catch (SQLException ex) {
             Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
         }
+        try { con.close(); } catch (Exception e) { /* ignored */ }
         return status;
          
      }
@@ -102,6 +103,7 @@ public class empservice {
         } catch (SQLException ex) {
             Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
         }
+        try { con.close(); } catch (Exception e) { /* ignored */ }
         return status;
          
      }
@@ -145,6 +147,7 @@ public class empservice {
         } catch (SQLException ex) {
             Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
         }
+        try { con.close(); } catch (Exception e) { /* ignored */ }
         return status;
          
      }
@@ -166,6 +169,7 @@ public class empservice {
         } catch (SQLException ex) {
             Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
         }
+        try { con.close(); } catch (Exception e) { /* ignored */ }
         return rs;
          
      }
@@ -191,7 +195,7 @@ public class empservice {
                 JOptionPane.showMessageDialog(null, e);
                 e.printStackTrace();
             }
-
+        try { con.close(); } catch (Exception e) { /* ignored */ }
         return rs;
         
     }
@@ -218,7 +222,7 @@ public class empservice {
                 JOptionPane.showMessageDialog(null, e);
                 e.printStackTrace();
             }
-
+        try { con.close(); } catch (Exception e) { /* ignored */ }
         return rs;
     }
     
@@ -245,6 +249,7 @@ public class empservice {
             }
 
             System.out.println(rs);
+            try { con.close(); } catch (Exception e) { /* ignored */ }
         return rs;
     }
 }
