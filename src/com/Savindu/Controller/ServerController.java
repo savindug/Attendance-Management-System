@@ -62,7 +62,7 @@ public class ServerController {
 
                      System.out.println(preparedStatement);
                     // Step 3: Execute the query or update query
-                    result = preparedStatement.executeUpdate(); 
+                    try{ result = preparedStatement.executeUpdate(); } catch(Exception e){};
 
                  }
                  
@@ -225,7 +225,7 @@ public class ServerController {
 
                      System.out.println(preparedStatement);
                     // Step 3: Execute the query or update query
-                    result = preparedStatement.executeUpdate(); 
+                    try{result = preparedStatement.executeUpdate(); }catch(Exception e){};
 
                  }
                  
@@ -367,7 +367,7 @@ public class ServerController {
 
                      System.out.println(preparedStatement);
                     // Step 3: Execute the query or update query
-                    result = preparedStatement.executeUpdate(); 
+                    try{result = preparedStatement.executeUpdate(); }catch(Exception e){};
 
                  }
                  
