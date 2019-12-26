@@ -177,7 +177,7 @@ public class Controller {
 //        
 //     }
             
-         public ArrayList<Attendance> getOTList(){
+         public void getOTList(){
        Connection connection = null;
         ResultSet rs = null;
         Statement st = null;
@@ -196,15 +196,15 @@ public class Controller {
                 rs = st.executeQuery(sql);
 
                 while(rs.next()){
-                    leave = new User();
-                    leave.setuID(rs.getString(1));
-                    leave.setuName(rs.getString(2));
-                    leave.setLeaveStart(rs.getString(3));
-                    leave.setLeaveEnd(rs.getString(4));
-                    leave.setLeaveSubmitted(rs.getString(5));
-                    leave.setLeaveRemark(rs.getString(6));
-                    leaveList.add(leave);
-                    System.out.println(leave.getuID()+"\t\t"+leave.getuName()+"\t\t"+leave.getLeaveStart()+"\t\t"+leave.getLeaveEnd()+"\t\t"+leave.getLeaveSubmitted()+"\t\t"+leave.getLeaveRemark());
+//                    leave = new User();
+//                    leave.setuID(rs.getString(1));
+//                    leave.setuName(rs.getString(2));
+//                    leave.setLeaveStart(rs.getString(3));
+//                    leave.setLeaveEnd(rs.getString(4));
+//                    leave.setLeaveSubmitted(rs.getString(5));
+//                    leave.setLeaveRemark(rs.getString(6));
+//                    leaveList.add(leave);
+//                    System.out.println(leave.getuID()+"\t\t"+leave.getuName()+"\t\t"+leave.getLeaveStart()+"\t\t"+leave.getLeaveEnd()+"\t\t"+leave.getLeaveSubmitted()+"\t\t"+leave.getLeaveRemark());
 
                 }
 
@@ -213,7 +213,7 @@ public class Controller {
                 e.printStackTrace();
             }
         
-        return rs;
+        //return 0;
     }
  
 
