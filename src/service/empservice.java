@@ -309,11 +309,9 @@ public class empservice {
         Statement st = null;
         
       String sql = "  select u.PIN, u.UserName, a.Clock, at.ItemName, a.Remark from \n" +
-"                    ras_AttRecord a, ras_Dept d, ras_Users u, ras_AttTypeItem at\n" +
-"                     where  u.UID = a.ID and a.AttTypeId = at.ItemId";;
-                    /*"  order by usr.PIN";*/
+                    "                    ras_AttRecord a, ras_Dept d, ras_Users u, ras_AttTypeItem at\n" +
+                    "                     where  u.UID = a.ID and a.AttTypeId = at.ItemId";                  
                      
-                    /* String sql = "select * from ras_AttRecord";*/
             
             try{
                 connection = DBConnection.openConnection();
