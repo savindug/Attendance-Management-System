@@ -43,7 +43,6 @@ public class MainInterface extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 204));
         setForeground(new java.awt.Color(204, 255, 204));
-        setPreferredSize(new java.awt.Dimension(1885, 990));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 

@@ -57,6 +57,7 @@ public class AppInterface extends javax.swing.JFrame {
     public AppInterface(String branchname) {
         initComponents();
         this.branchname = branchname;
+        branchnamedisplay.setText(branchname);
     }
     
     void viewPanel(String cname) {
@@ -82,6 +83,8 @@ public class AppInterface extends javax.swing.JFrame {
         btnmainmenu = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        branchnamedisplay = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         mainmenucard = new javax.swing.JPanel();
         mainmenuvr = new javax.swing.JButton();
@@ -281,7 +284,15 @@ public class AppInterface extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(0, 51, 0));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 71)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Department of Agrarian Development - Galle");
+        jLabel2.setText("      Department of Agrarian Development ");
+
+        branchnamedisplay.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        branchnamedisplay.setForeground(new java.awt.Color(255, 255, 255));
+        branchnamedisplay.setText("check");
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("Branch :");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -289,14 +300,24 @@ public class AppInterface extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1599, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addComponent(jLabel45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(branchnamedisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(branchnamedisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -367,7 +388,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGroup(mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(301, Short.MAX_VALUE))
+                .addContainerGap(298, Short.MAX_VALUE))
         );
 
         jPanel3.add(mainmenucard, "mainmenucard");
@@ -584,7 +605,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65)
                 .addComponent(btngeneratereportemployeetable, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportsemp, "viewreportsemp");
@@ -721,7 +742,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(settingsnun, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
                 .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         jPanel3.add(changesettingscard, "changesettingscard");
@@ -776,7 +797,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(btnbackaddreports1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
 
         jPanel3.add(addusertable, "addusertable");
@@ -834,7 +855,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(btnbackaddreports2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
 
         jPanel3.add(addleavetable, "addleavetable");
@@ -889,7 +910,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(btnbackaddreports3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
 
         jPanel3.add(addattendancetable, "addattendancetable");
@@ -946,7 +967,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGroup(addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnbackaddreports4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
 
         jPanel3.add(addnotes, "addnotes");
@@ -1053,7 +1074,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74)
                 .addComponent(btngeneratereportatttable, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportsatt, "viewreportsatt");
@@ -1161,7 +1182,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(117, 117, 117)
                 .addComponent(btngeneratereportleavetable, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportsleave, "viewreportsleave");
@@ -1287,7 +1308,7 @@ public class AppInterface extends javax.swing.JFrame {
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportscard, "viewreportscard");
@@ -1374,7 +1395,7 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(viewreportsotLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel33)
-                .addContainerGap(822, Short.MAX_VALUE))
+                .addContainerGap(819, Short.MAX_VALUE))
             .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(viewreportsotLayout.createSequentialGroup()
                     .addGap(142, 142, 142)
@@ -1393,7 +1414,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(74, 74, 74)
                     .addComponent(btngeneratereportottable, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(143, Short.MAX_VALUE)))
+                    .addContainerGap(140, Short.MAX_VALUE)))
         );
 
         jPanel3.add(viewreportsot, "viewreportsot");
@@ -1417,7 +1438,7 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(viewnotesLayout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addComponent(jLabel34)
-                .addContainerGap(827, Short.MAX_VALUE))
+                .addContainerGap(824, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewnotes, "viewnotes");
@@ -1472,7 +1493,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(btnbackaddreports5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
 
         jPanel3.add(addottable, "addottable");
@@ -1895,6 +1916,7 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> attablebranch;
     private javax.swing.JComboBox<String> attablemonth;
     private javax.swing.JComboBox<String> attableyear;
+    private javax.swing.JLabel branchnamedisplay;
     private javax.swing.JButton btnaddattendancetable;
     private javax.swing.JButton btnaddleavetable1;
     private javax.swing.JButton btnaddnote;
@@ -1962,6 +1984,7 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
