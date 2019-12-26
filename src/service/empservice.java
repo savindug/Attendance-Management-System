@@ -276,7 +276,31 @@ public class empservice {
         
         return rs;
     }
-    
+     public ResultSet getOTList(){
+       Connection connection = null;
+        ResultSet rs = null;
+        Statement st = null;
+        
+        String sql = " SELECT att.din, usr.UserName, dept.DeptName, CAST(clock as date) as date, CAST(RAND(CHECKSUM(NEWID())) * 4 as INT) + 1 as otTime\n" +
+                    " from ras_AttRecord att, ras_Users usr, ras_Dept dept\n" +
+                    " where usr.din = att.din and dept.DeptId = usr.DeptId and CAST(clock as date) like '2019-11%'";
+        
+            
+            try{
+                connection = DBConnection.openConnection();
+                st = connection.createStatement();
+                rs = st.executeQuery(sql);
+
+                
+
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+                e.printStackTrace();
+            }
+        
+        return rs;
+    }
+     
       public ResultSet getatt(){
        Connection connection = null;
         ResultSet rs = null;

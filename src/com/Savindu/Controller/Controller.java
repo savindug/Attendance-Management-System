@@ -99,6 +99,7 @@ public class Controller {
         return attL;
     }
      
+     
         public ArrayList<User> leaveList(){
         
         ArrayList<User> leaveList = new ArrayList<>();
@@ -145,6 +146,75 @@ public class Controller {
         return leaveList;
     }
     
+//        public void createOTList(){
+//          
+//        String create_table = "IF NOT EXISTS\n" +
+//                                "   (  SELECT *\n" +
+//                                "      FROM sys.tables\n" +
+//                                "      WHERE [name] = 'otList'\n" +
+//                                "   )\n" +
+//                                "   CREATE TABLE otList (\n" +
+//                                "  id int NOT NULL,\n" +
+//                                "  userId int NOT NULL,\n" +
+//                                "  userName varchar NOT NULL,\n" +
+//                                "  department varchar NOT NULL,\n" +
+//                                "  clock datetime NOT NULL,\n" +
+//                                "  trgdate datetime NOT NULL\n" +
+//                                "  )";
+//        Connection connection = null;
+//        ResultSet rs = null;
+//        Statement st = null;
+//        
+//        try{
+//                connection = DBConnection.openConnection();
+//                st = connection.createStatement();
+//                st.executeUpdate(create_table);     
+//                
+//            }catch(Exception e){
+//                JOptionPane.showMessageDialog(null, e);
+//                e.printStackTrace();
+//            }
+//        
+//     }
+            
+        public ResultSet otList(){
+             Connection connection = null;
+        ResultSet rs = null;
+        Statement st = null;
+       Attendance att;
+        ArrayList<Attendance> attL = new ArrayList<>();
+       
+        
+        
+        String sql = " SELECT att.din, usr.UserName, dept.DeptName, CAST(clock as date) as date, CAST(RAND(CHECKSUM(NEWID())) * 4 as INT) + 1 as otTime\n" +
+                    " from ras_AttRecord att, ras_Users usr, ras_Dept dept\n" +
+                    " where usr.din = att.din and dept.DeptId = usr.DeptId and CAST(clock as date) like '2019-11%'";
+        
+         try{
+                connection = DBConnection.openConnection();
+                st = connection.createStatement();
+                rs = st.executeQuery(sql);     
+                
+//                while(rs.next()){
+//                    att = new Attendance();
+//                    att.setuId(rs.getString(1));
+//                    att.setuName(rs.getString(2));
+//                    att.setAttTime(rs.getString(3));
+//                    att.setRemark(rs.getString(4));
+//                    attL.add(att);
+//                    //System.out.println(user.getuID()+"\t\t"+user.getuName()+"\t\t"+user.getGender()+"\t\t"+user.getCreateDate()+"\t\t"+user.getLastLoggedIn());
+//
+//                }
+                
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+                e.printStackTrace();
+            }
+
+            System.out.println(rs);
+        
+        return rs;
+        }
  
 
 }
