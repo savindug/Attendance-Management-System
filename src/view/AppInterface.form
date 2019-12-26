@@ -462,7 +462,7 @@
                                   <Component id="btnaddot" min="-2" pref="283" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel19" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                                   <Component id="jLabel22" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                               </Group>
@@ -1016,7 +1016,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnbackaddreports1" min="-2" pref="201" max="-2" attributes="0"/>
+                              <Component id="btnlocalreport1" min="-2" pref="201" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="695" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -1035,7 +1035,7 @@
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="423" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="btnbackaddreports1" min="-2" pref="55" max="-2" attributes="0"/>
+                      <Component id="btnlocalreport1" min="-2" pref="55" max="-2" attributes="0"/>
                       <EmptySpace pref="248" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -1090,15 +1090,15 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btnbackaddreports1">
+            <Component class="javax.swing.JButton" name="btnlocalreport1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Back"/>
+                <Property name="text" type="java.lang.String" value="Export"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbackaddreports1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnlocalreport1ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel29">
@@ -1167,12 +1167,10 @@
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="localltsearch" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jDatelt1" max="32767" attributes="0"/>
-                              <Component id="jLabel50" pref="37" max="32767" attributes="0"/>
-                              <Component id="jLabel51" max="32767" attributes="0"/>
-                              <Component id="jDatelt2" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jDatelt1" max="32767" attributes="0"/>
+                          <Component id="jLabel50" max="32767" attributes="0"/>
+                          <Component id="jLabel51" max="32767" attributes="0"/>
+                          <Component id="jDatelt2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
@@ -2177,10 +2175,8 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel24" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel26" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
-                                      <Component id="jLabel25" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel26" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="jLabel25" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="viewfopt" min="-2" pref="283" max="-2" attributes="0"/>
@@ -2686,12 +2682,10 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jDateot1" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="localotsearch" max="32767" attributes="0"/>
-                              <Component id="jLabel48" max="32767" attributes="0"/>
-                              <Component id="jLabel49" max="32767" attributes="0"/>
-                              <Component id="jDateot2" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="localotsearch" max="32767" attributes="0"/>
+                          <Component id="jLabel48" max="32767" attributes="0"/>
+                          <Component id="jLabel49" max="32767" attributes="0"/>
+                          <Component id="jDateot2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="jScrollPane8" min="-2" pref="440" max="-2" attributes="0"/>

@@ -16,6 +16,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,8 +37,14 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 import model.empmodel;
 import net.proteanit.sql.DbUtils;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import static org.apache.poi.hssf.usermodel.HeaderFooter.file;
+import org.apache.poi.ss.usermodel.Workbook;
 import service.empservice;
 
 /**
@@ -130,7 +137,7 @@ public class AppInterface extends javax.swing.JFrame {
         addusertable = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableuser = new javax.swing.JTable();
-        btnbackaddreports1 = new javax.swing.JButton();
+        btnlocalreport1 = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
         addleavetable = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -523,7 +530,7 @@ public class AppInterface extends javax.swing.JFrame {
                             .addComponent(btnaddleavetable1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnaddot, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -774,11 +781,11 @@ public class AppInterface extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tableuser);
 
-        btnbackaddreports1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        btnbackaddreports1.setText("Back");
-        btnbackaddreports1.addActionListener(new java.awt.event.ActionListener() {
+        btnlocalreport1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnlocalreport1.setText("Export");
+        btnlocalreport1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbackaddreports1ActionPerformed(evt);
+                btnlocalreport1ActionPerformed(evt);
             }
         });
 
@@ -797,7 +804,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addusertableLayout.createSequentialGroup()
-                        .addComponent(btnbackaddreports1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnlocalreport1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(695, 695, 695))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addusertableLayout.createSequentialGroup()
                         .addComponent(jLabel29)
@@ -811,7 +818,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addComponent(btnbackaddreports1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnlocalreport1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(248, Short.MAX_VALUE))
         );
 
@@ -889,11 +896,10 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(localltsearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jDatelt1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                        .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jDatelt2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jDatelt1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jDatelt2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(61, 61, 61)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1375,9 +1381,8 @@ public class AppInterface extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(viewfopt, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(viewreportscardLayout.createSequentialGroup()
@@ -1594,11 +1599,10 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jDateot1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(localotsearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jDateot2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(localotsearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jDateot2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(52, 52, 52)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1858,10 +1862,10 @@ public class AppInterface extends javax.swing.JFrame {
         viewPanel("viewnotes");
     }//GEN-LAST:event_viewfoptActionPerformed
 
-    private void btnbackaddreports1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackaddreports1ActionPerformed
+    private void btnlocalreport1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlocalreport1ActionPerformed
         // TODO add your handling code here:
-        viewPanel("addreportscard");
-    }//GEN-LAST:event_btnbackaddreports1ActionPerformed
+   
+    }//GEN-LAST:event_btnlocalreport1ActionPerformed
 
     private void btnbackaddreports2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackaddreports2ActionPerformed
         // TODO add your handling code here:
@@ -2035,7 +2039,6 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JButton btnaddreports;
     private javax.swing.JButton btnaddusertable;
     private javax.swing.JButton btnattablesearch;
-    private javax.swing.JButton btnbackaddreports1;
     private javax.swing.JButton btnbackaddreports2;
     private javax.swing.JButton btnbackaddreports3;
     private javax.swing.JButton btnbackaddreports4;
@@ -2047,6 +2050,7 @@ public class AppInterface extends javax.swing.JFrame {
     private javax.swing.JButton btngeneratereportleavetable;
     private javax.swing.JButton btngeneratereportottable;
     private javax.swing.JButton btnleavetablesearch;
+    private javax.swing.JButton btnlocalreport1;
     private javax.swing.JButton btnmainmenu;
     private javax.swing.JButton btnottablesearch;
     private javax.swing.JButton btnviewattt;
