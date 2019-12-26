@@ -315,7 +315,7 @@ public class AppInterface extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1599, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(138, 138, 138)
@@ -356,10 +356,10 @@ public class AppInterface extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("View Reports");
+        jLabel3.setText("Online Reports");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setText("Add Reports");
+        jLabel4.setText("Local Reports");
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel11.setText("Main Menu");
@@ -374,17 +374,16 @@ public class AppInterface extends javax.swing.JFrame {
                         .addGap(322, 322, 322)
                         .addComponent(mainmenuvr))
                     .addGroup(mainmenucardLayout.createSequentialGroup()
-                        .addGap(392, 392, 392)
+                        .addGap(378, 378, 378)
                         .addComponent(jLabel3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 340, Short.MAX_VALUE)
                 .addGroup(mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mainmenucardLayout.createSequentialGroup()
-                        .addGap(279, 279, 279)
-                        .addComponent(mainmenuar))
-                    .addGroup(mainmenucardLayout.createSequentialGroup()
-                        .addGap(350, 350, 350)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(371, 371, 371))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainmenucardLayout.createSequentialGroup()
+                        .addComponent(mainmenuar)
+                        .addGap(371, 371, 371))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainmenucardLayout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(426, 426, 426))))
             .addGroup(mainmenucardLayout.createSequentialGroup()
                 .addGap(691, 691, 691)
                 .addComponent(jLabel11)
@@ -411,7 +410,7 @@ public class AppInterface extends javax.swing.JFrame {
         addreportscard.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel13.setText("Add Reports");
+        jLabel13.setText("Local Reports");
 
         btnaddusertable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buttonadddata.png"))); // NOI18N
         btnaddusertable.addActionListener(new java.awt.event.ActionListener() {
@@ -435,13 +434,13 @@ public class AppInterface extends javax.swing.JFrame {
         });
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel17.setText("Add Employee Table");
+        jLabel17.setText("Employee Table");
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel18.setText("Add Attendance Table");
+        jLabel18.setText("Attendance Table");
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel19.setText("Add OT Table");
+        jLabel19.setText("OT Table");
 
         btnaddleavetable1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buttonadddata.png"))); // NOI18N
         btnaddleavetable1.addActionListener(new java.awt.event.ActionListener() {
@@ -461,7 +460,7 @@ public class AppInterface extends javax.swing.JFrame {
         });
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel22.setText("Add Leave Table");
+        jLabel22.setText("Leave Table");
 
         javax.swing.GroupLayout addreportscardLayout = new javax.swing.GroupLayout(addreportscard);
         addreportscard.setLayout(addreportscardLayout);
@@ -474,33 +473,34 @@ public class AppInterface extends javax.swing.JFrame {
                         .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(addreportscardLayout.createSequentialGroup()
                                 .addComponent(jLabel17)
-                                .addGap(98, 98, 98)
+                                .addGap(151, 151, 151)
                                 .addComponent(jLabel18)
-                                .addGap(15, 15, 15))
+                                .addGap(38, 38, 38))
                             .addGroup(addreportscardLayout.createSequentialGroup()
                                 .addComponent(btnaddusertable, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(60, 60, 60)
                                 .addComponent(btnaddattendancetable, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(addreportscardLayout.createSequentialGroup()
                                 .addGap(56, 56, 56)
                                 .addComponent(btnaddleavetable1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(64, 64, 64)
                                 .addComponent(btnaddot, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addreportscardLayout.createSequentialGroup()
-                                .addGap(113, 113, 113)
+                            .addGroup(addreportscardLayout.createSequentialGroup()
+                                .addGap(130, 130, 130)
                                 .addComponent(jLabel22)
-                                .addGap(170, 170, 170)
-                                .addComponent(jLabel19))))
-                    .addGroup(addreportscardLayout.createSequentialGroup()
-                        .addGap(705, 705, 705)
-                        .addComponent(jLabel13))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel19)
+                                .addGap(92, 92, 92))))
                     .addGroup(addreportscardLayout.createSequentialGroup()
                         .addGap(654, 654, 654)
                         .addComponent(btnaddnotes, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(addreportscardLayout.createSequentialGroup()
                         .addGap(620, 620, 620)
-                        .addComponent(jLabel20)))
+                        .addComponent(jLabel20))
+                    .addGroup(addreportscardLayout.createSequentialGroup()
+                        .addGap(710, 710, 710)
+                        .addComponent(jLabel13)))
                 .addContainerGap(125, Short.MAX_VALUE))
         );
         addreportscardLayout.setVerticalGroup(
@@ -523,7 +523,7 @@ public class AppInterface extends javax.swing.JFrame {
                             .addComponent(btnaddleavetable1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnaddot, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(addreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -1295,19 +1295,19 @@ public class AppInterface extends javax.swing.JFrame {
         });
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel23.setText("View Employee Table");
+        jLabel23.setText("Employee Table");
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel24.setText("View Attendance Table");
+        jLabel24.setText("Attendance Table");
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel25.setText("View Leave Table");
+        jLabel25.setText("Leave Table");
 
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel26.setText("View OT Table");
+        jLabel26.setText("OT Table");
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel27.setText("View Reports");
+        jLabel27.setText("Online Reports");
 
         btnviewattt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/viewreportbutton.png"))); // NOI18N
         btnviewattt.addActionListener(new java.awt.event.ActionListener() {
@@ -1334,20 +1334,20 @@ public class AppInterface extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportscardLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel23)
-                                .addGap(79, 79, 79)))
-                        .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnviewattt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(116, 116, 116)))
                         .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(viewreportscardLayout.createSequentialGroup()
+                                .addComponent(btnviewattt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(54, 54, 54)
                                 .addComponent(viewleat, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(57, 57, 57)
                                 .addComponent(viewott, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(viewreportscardLayout.createSequentialGroup()
-                                .addGap(103, 103, 103)
+                                .addGap(39, 39, 39)
+                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(155, 155, 155)
                                 .addComponent(jLabel25)
-                                .addGap(154, 154, 154)
+                                .addGap(227, 227, 227)
                                 .addComponent(jLabel26))))
                     .addGroup(viewreportscardLayout.createSequentialGroup()
                         .addGap(719, 719, 719)
@@ -1374,9 +1374,10 @@ public class AppInterface extends javax.swing.JFrame {
                             .addComponent(viewott, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(viewreportscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(viewfopt, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(viewreportscardLayout.createSequentialGroup()
