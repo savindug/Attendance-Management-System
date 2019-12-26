@@ -7,9 +7,14 @@ package com.Savindu.Controller;
 import com.Savindu.Entity.Attendance;
 import com.Savindu.Entity.User;
 import com.Savindu.Util.DBConnection;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.TableModel;
 /**
  *
  * @author Savindu
@@ -177,7 +182,7 @@ public class Controller {
 //        
 //     }
             
-         public void getOTList(){
+         public ArrayList<Attendance> getOTList(){
        Connection connection = null;
         ResultSet rs = null;
         Statement st = null;
@@ -196,16 +201,15 @@ public class Controller {
                 rs = st.executeQuery(sql);
 
                 while(rs.next()){
-//                    leave = new User();
-//                    leave.setuID(rs.getString(1));
-//                    leave.setuName(rs.getString(2));
-//                    leave.setLeaveStart(rs.getString(3));
-//                    leave.setLeaveEnd(rs.getString(4));
-//                    leave.setLeaveSubmitted(rs.getString(5));
-//                    leave.setLeaveRemark(rs.getString(6));
-//                    leaveList.add(leave);
-//                    System.out.println(leave.getuID()+"\t\t"+leave.getuName()+"\t\t"+leave.getLeaveStart()+"\t\t"+leave.getLeaveEnd()+"\t\t"+leave.getLeaveSubmitted()+"\t\t"+leave.getLeaveRemark());
-
+                    ot = new Attendance();
+                    ot.setuId(rs.getString(1));
+                    ot.setuName(rs.getString(2));
+                    ot.setClockIn(rs.getString(3));
+                    ot.setClockOut(rs.getString(4));
+                    ot.setOtHrs(rs.getInt(5));
+                    ot.setDate(rs.getString(6));
+                    otL.add(ot);
+                    
                 }
 
             }catch(Exception e){
@@ -213,9 +217,27 @@ public class Controller {
                 e.printStackTrace();
             }
         
-        //return 0;
+        return otL;
     }
  
+         public void exportTable(JTable table, File file) throws IOException {
+            TableModel model = table.getModel();
+            FileWriter out = new FileWriter(file);
+            for(int i=0; i < model.getColumnCount(); i++) {
+        out.write(model.getColumnName(i) + "\t");
+            }
+            out.write("\n");
+
+            for(int i=0; i< model.getRowCount(); i++) {
+        for(int j=0; j < model.getColumnCount(); j++) {
+            out.write(model.getValueAt(i,j).toString()+"\t");
+            }
+            out.write("\n");
+        }
+
+        out.close();
+        System.out.println("write out to: " + file);
+}
 
 }
 

@@ -17,7 +17,44 @@ public class Attendance {
     private String place;
     private String verifyMode;
     private String remark;
-    private String attTime;
+    private String attTime; 
+    private String clockIn;
+    private String clockOut;
+    private int otHrs;
+    private String date;
+    
+    public String getClockIn() {
+        return clockIn;
+    }
+
+    public void setClockIn(String clockIn) {
+        this.clockIn = clockIn;
+    }
+
+    public String getClockOut() {
+        return clockOut;
+    }
+
+    public void setClockOut(String clockOut) {
+        this.clockOut = clockOut;
+    }
+
+    public int getOtHrs() {
+        return otHrs;
+    }
+
+    public void setOtHrs(int otHrs) {
+        this.otHrs = otHrs;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+    
 
     public void setuId(String uId) {
         this.uId = uId;

@@ -14,6 +14,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -41,11 +42,6 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import model.empmodel;
 import net.proteanit.sql.DbUtils;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import static org.apache.poi.hssf.usermodel.HeaderFooter.file;
-import org.apache.poi.ss.usermodel.Workbook;
 import service.empservice;
 
 /**
@@ -819,8 +815,8 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addComponent(btnbackaddreports1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addComponent(btnlocalreport1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(248, Short.MAX_VALUE))
         );
 
         jPanel3.add(addusertable, "addusertable");
@@ -910,7 +906,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnbackaddreports2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
 
         jPanel3.add(addleavetable, "addleavetable");
@@ -1645,7 +1641,7 @@ public class AppInterface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1070, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1851,6 +1847,8 @@ public class AppInterface extends javax.swing.JFrame {
        empservice es = new empservice();
         tableot.setModel(DbUtils.resultSetToTableModel(es.getOTList()));
         viewPanel("addottable");
+         ServerController ss = new ServerController();
+        ss.insertOTList(branchname);
     }//GEN-LAST:event_btnaddotActionPerformed
 
     private void btnviewemptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewemptActionPerformed
@@ -1880,6 +1878,12 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btnlocalreport1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlocalreport1ActionPerformed
         // TODO add your handling code here:
+        Controller ct = new Controller();
+        try {
+            ct.exportTable(tableuser, new File("D:\\RAMS\\exports\\localUser.xls"));
+        } catch (IOException ex) {
+            Logger.getLogger(AppInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
    
     }//GEN-LAST:event_btnlocalreport1ActionPerformed
 

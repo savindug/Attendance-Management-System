@@ -506,6 +506,48 @@ public class ServerController {
 //         ServerController ss = new ServerController();
 //        ss.insertUserList();
 //    }
+                 
+                  public void insertOTList(String BranchName){
+                    
+            ArrayList<Attendance> oTL = new ArrayList<>();
+            Controller ut = new Controller();
+            oTL = ut.getOTList();
+
+            String INSERT_USERS_SQL = "INSERT INTO otTable" +
+            "  (`userId`, `userName`, `clockIn`, `clockOut`, `date`, `otHours`, `branchName`) VALUES " +
+            " (?, ?, ?, ?, ?,?,?);";
+    
+            try{
+                connection = ServerConnection.openConnection();
+
+                 for(int i=0; i<oTL.size(); i++){
+                    PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
+
+                    preparedStatement.setString(1, oTL.get(i).getuId().toString());
+                    preparedStatement.setString(2, oTL.get(i).getuName().toString());
+                    preparedStatement.setString(3, oTL.get(i).getClockIn().toString());
+                    preparedStatement.setString(4, oTL.get(i).getClockOut().toString());
+                    preparedStatement.setString(5, oTL.get(i).getDate().toString());
+                    preparedStatement.setInt(6, oTL.get(i).getOtHrs());
+                    preparedStatement.setString(7, BranchName);
+
+                     System.out.println(preparedStatement);
+                    // Step 3: Execute the query or update query
+                    try{result = preparedStatement.executeUpdate(); }catch(Exception e){};
+
+                 }
+                 
+                  if(result > 0){
+                        JOptionPane.showMessageDialog(null, "Records Updated!");
+                    }
+
+            }catch(Exception e){
+                    JOptionPane.showMessageDialog(null, "Records Updated!");
+                   
+                }
+            
+
+    }
         
     }
         
