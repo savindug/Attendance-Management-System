@@ -989,6 +989,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         btnattablesearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnattablesearch.setText("Search");
+        btnattablesearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnattablesearchActionPerformed(evt);
+            }
+        });
 
         btngeneratereportatttable.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btngeneratereportatttable.setText("Generate Report");
@@ -1078,6 +1083,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         btnleavetablesearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnleavetablesearch.setText("Search");
+        btnleavetablesearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnleavetablesearchActionPerformed(evt);
+            }
+        });
 
         viewreportsleavetable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1739,6 +1749,104 @@ public class AppInterface extends javax.swing.JFrame {
         // TODO add your handling code here:
         viewPanel("addreportscard");
     }//GEN-LAST:event_btnbackaddreports5ActionPerformed
+
+    private void btnattablesearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnattablesearchActionPerformed
+        // TODO add your handling code here:
+        empmodel em = new empmodel();
+        em.setSearchyear(attableyear.getSelectedItem().toString());
+        em.setSearchbranchname(attablebranch.getSelectedItem().toString());
+        String amonth = null;
+        String amonth1 = attablemonth.getSelectedItem().toString();
+        if (amonth1.equals("January") ){
+            amonth = "01";
+        }
+        else if (amonth1.equals("February")){
+            amonth = "02";
+        }
+        else if (amonth1.equals("March")){
+            amonth = "03";
+        }
+        else if (amonth1.equals("April")){
+            amonth = "04";
+        }
+        else if (amonth1.equals("May")){
+            amonth = "05";
+        }
+        else if (amonth1.equals("June")){
+            amonth = "06";
+        }
+        else if (amonth1.equals("July")){
+            amonth = "07";
+        }
+        else if (amonth1.equals("August")){
+            amonth = "08";
+        }
+        else if (amonth1.equals("September")){
+            amonth = "09";
+        }
+        else if (amonth1.equals("October")){
+            amonth = "10";
+        }
+        else if (amonth1.equals("November")){
+            amonth = "11";
+        }
+        else if(amonth1.equals("December")){
+            amonth = "12";
+        }
+        em.setSearchmonth(amonth);
+        empservice es = new empservice();
+                
+        viewreportsatttable.setModel(DbUtils.resultSetToTableModel(es.viewatt(em)));
+    }//GEN-LAST:event_btnattablesearchActionPerformed
+
+    private void btnleavetablesearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnleavetablesearchActionPerformed
+        // TODO add your handling code here:
+        empmodel em = new empmodel();
+        em.setSearchyear(leavetableyear.getSelectedItem().toString());
+        em.setSearchbranchname(leavetablebranch.getSelectedItem().toString());
+        String amonth = null;
+        String amonth1 = leavetablemonth.getSelectedItem().toString();
+        if (amonth1.equals("January") ){
+            amonth = "01";
+        }
+        else if (amonth1.equals("February")){
+            amonth = "02";
+        }
+        else if (amonth1.equals("March")){
+            amonth = "03";
+        }
+        else if (amonth1.equals("April")){
+            amonth = "04";
+        }
+        else if (amonth1.equals("May")){
+            amonth = "05";
+        }
+        else if (amonth1.equals("June")){
+            amonth = "06";
+        }
+        else if (amonth1.equals("July")){
+            amonth = "07";
+        }
+        else if (amonth1.equals("August")){
+            amonth = "08";
+        }
+        else if (amonth1.equals("September")){
+            amonth = "09";
+        }
+        else if (amonth1.equals("October")){
+            amonth = "10";
+        }
+        else if (amonth1.equals("November")){
+            amonth = "11";
+        }
+        else if(amonth1.equals("December")){
+            amonth = "12";
+        }
+        em.setSearchmonth(amonth);
+        empservice es = new empservice();
+                
+        viewreportsleavetable.setModel(DbUtils.resultSetToTableModel(es.viewleave(em)));
+    }//GEN-LAST:event_btnleavetablesearchActionPerformed
 
     /**
      * @param args the command line arguments

@@ -161,8 +161,59 @@ public class empservice {
         
         try {           
             
-            ps = con.prepareStatement("Select userId, UserName, Gender, CreateDate, branchName from Employees where branchname = ? Order by userId");
+            ps = con.prepareStatement("Select userId, UserName, Gender, deptName, branchName from Employees where branchname = ? Order by userId");
             ps.setString(1, em.getSearchbranchname());
+            rs = ps.executeQuery();
+            
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+        return rs;
+         
+     }
+     
+     
+     public ResultSet viewatt(empmodel em){
+         
+        con = DBConnect.connect();
+       
+        ResultSet rs = null;
+        
+        try {           
+            
+            ps = con.prepareStatement("Select a.userId, a.UserName, a.branchName, e.deptName, a.clock, a.remarks from \n"
+                    + "Employees e, Attendance a \n"
+                    + "where a.userId = e.userId and a.branchname = ? and a.clock like ? \n"
+                    + "Order by a.clock");
+            ps.setString(1, em.getSearchbranchname());
+            ps.setString(2, em.getSearchyear().toString()+"-"+em.getSearchmonth().toString()+"%");
+            rs = ps.executeQuery();
+            
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+        return rs;
+         
+     }
+     
+     public ResultSet viewleave(empmodel em){
+         
+        con = DBConnect.connect();
+       
+        ResultSet rs = null;
+        
+        try {           
+            
+            ps = con.prepareStatement("Select l.userId, l.UserName, l.branchName, e.deptName, l.submittedDate, l.fromDtae ,l.toDate ,l.remarks \n"
+                    + " from Employees e, Leaves l\n"
+                    + "where l.userId = e.userId and l.branchname = ? and l.submittedDate like ? \n"
+                    + "Order by l.submittedDate");
+            ps.setString(1, em.getSearchbranchname());
+            ps.setString(2, em.getSearchyear().toString()+"-"+em.getSearchmonth().toString()+"%");
             rs = ps.executeQuery();
             
            
