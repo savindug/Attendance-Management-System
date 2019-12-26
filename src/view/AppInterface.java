@@ -1641,7 +1641,7 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btnviewreportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewreportsActionPerformed
         // TODO add your handling code here:
-        if(branchname.equals("Head_Office") || branchname.equals("Branch_Office")){
+        if(branchname.equals("Head_Office") || branchname.equals("District_Office")){
         /*ServerController sc = new ServerController();
         tablevr.setModel(DbUtils.resultSetToTableModel(sc.getAttList()));*/
         viewPanel("viewreportscard");
@@ -1668,7 +1668,7 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void mainmenuvrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainmenuvrActionPerformed
         // TODO add your handling code here:
-        if(branchname.equals("Head_Office") || branchname.equals("Branch_Office")){
+        if(branchname.equals("Head_Office") || branchname.equals("District_Office")){
         /*ServerController sc = new ServerController();
         tablevr.setModel(DbUtils.resultSetToTableModel(sc.getAttList()));*/
         viewPanel("viewreportscard");

@@ -63,7 +63,7 @@ public static Connection openConnection() {
 		return connection;
 	}
 }
-//    public static void main(String args[]) {
-//      openConnection();
-//    }
+    public static void main(String args[]) {
+      openConnection();
+    }
 }

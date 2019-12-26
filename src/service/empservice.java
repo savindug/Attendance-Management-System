@@ -230,7 +230,9 @@ public class empservice {
         ResultSet rs = null;
         Statement st = null;
         
-        String sql = "select * from ras_Users";
+        String sql = "select u.PIN, u.UserName, u.Sex, d.DeptName \n"
+                + "from ras_Users u, ras_Dept d \n"
+                + "where d.DeptId = u.DeptId";
             
             try{
                 connection = DBConnection.openConnection();
@@ -283,7 +285,7 @@ public class empservice {
         
         String sql = " SELECT att.din, usr.UserName, dept.DeptName, CAST(clock as date) as date, CAST(RAND(CHECKSUM(NEWID())) * 4 as INT) + 1 as otTime\n" +
                     " from ras_AttRecord att, ras_Users usr, ras_Dept dept\n" +
-                    " where usr.din = att.din and dept.DeptId = usr.DeptId and CAST(clock as date) like '2019-11%'";
+                    " where usr.din = att.din and dept.DeptId = usr.DeptId and CAST(clock as date) like '2019%'";
         
             
             try{
@@ -306,12 +308,10 @@ public class empservice {
         ResultSet rs = null;
         Statement st = null;
         
-      String sql = "  select u.PIN, u.UserName, d.DeptName, a.Clock, a.Remark  from \n" +
-                    "  ras_AttRecord a, ras_Dept d, ras_Users u \n" +
-                  "  where d.DeptId = u.DeptId and u.UID = a.ID ";
-                    /*"  order by usr.PIN";*/
+      String sql = "  select u.PIN, u.UserName, a.Clock, at.ItemName, a.Remark from \n" +
+                    "                    ras_AttRecord a, ras_Dept d, ras_Users u, ras_AttTypeItem at\n" +
+                    "                     where  u.UID = a.ID and a.AttTypeId = at.ItemId";                  
                      
-                    /* String sql = "select * from ras_AttRecord";*/
             
             try{
                 connection = DBConnection.openConnection();
