@@ -25,7 +25,7 @@ public class ServerConnection {
 	
 	private static final String PASSWORD = "nw2251997";
 	
-	private static Connection connection = null;
+    public static Connection connection = null;
 	
 
 public static Connection openConnection() {
@@ -63,7 +63,7 @@ public static Connection openConnection() {
 		return connection;
 	}
 }
-    public static void main(String args[]) {
-      openConnection();
-    }
+//    public static void main(String args[]) {
+//      openConnection();
+//    }
 }
