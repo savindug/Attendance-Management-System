@@ -278,14 +278,16 @@ public class empservice {
         
         return rs;
     }
+     
      public ResultSet getOTList(){
        Connection connection = null;
         ResultSet rs = null;
         Statement st = null;
         
-        String sql = " SELECT att.din, usr.UserName, dept.DeptName, CAST(clock as date) as date, CAST(RAND(CHECKSUM(NEWID())) * 4 as INT) + 1 as otTime\n" +
-                    " from ras_AttRecord att, ras_Users usr, ras_Dept dept\n" +
-                    " where usr.din = att.din and dept.DeptId = usr.DeptId and CAST(clock as date) like '2019%'";
+        String sql ="SELECT att.din, usr.UserName , MAX(clock) as Clock_In, MIN(clock) as Clock_out, DATEDIFF(HOUR, MIN(clock), MAX(clock)) AS Othours, CAST(clock AS DATE) as DateField\n" +
+                    "FROM ras_AttRecord att, ras_Users usr\n" +
+                    "where usr.din = att.din \n" +
+                    "GROUP BY CAST(clock AS DATE), att.din, usr.UserName";
         
             
             try{
@@ -306,17 +308,18 @@ public class empservice {
       public ResultSet getatt(){
        Connection connection = null;
         ResultSet rs = null;
-        Statement st = null;
+         Statement st = null;
         
-      String sql = "  select u.PIN, u.UserName, a.Clock, at.ItemName, a.Remark from \n" +
-                    "                    ras_AttRecord a, ras_Dept d, ras_Users u, ras_AttTypeItem at\n" +
-                    "                     where  u.UID = a.ID and a.AttTypeId = at.ItemId";                  
+        
+      String sql = " select u.PIN, u.UserName, a.Clock, at.ItemName, a.Remark from \n" +
+                    " ras_AttRecord a, ras_Dept d, ras_Users u, ras_AttTypeItem at\n" +
+                    "where  u.UID = a.ID and a.AttTypeId = at.ItemId";                 
                      
             
             try{
                 connection = DBConnection.openConnection();
                 st = connection.createStatement();
-                rs = st.executeQuery(sql);     
+                rs = st.executeQuery(sql);    
 
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, e);
@@ -325,6 +328,92 @@ public class empservice {
 
             System.out.println(rs);
            
+        return rs;
+    }
+      
+       public ResultSet searchAttList(empmodel em){
+       Connection connection = null;
+        ResultSet rs = null;
+        
+        
+        
+      String sql = " select u.PIN, u.UserName, a.Clock, at.ItemName, a.Remark from \n" +
+                    " ras_AttRecord a, ras_Dept d, ras_Users u, ras_AttTypeItem at\n" +
+                    "where  u.UID = a.ID and a.AttTypeId = at.ItemId and CAST(a.Clock as date)  between ?"
+                + "  and ? ";                 
+                     
+            
+            try{
+                connection = DBConnection.openConnection();
+                ps = connection.prepareStatement(sql);
+                ps.setString(1, em.getFromDate().toString());
+                ps.setString(2, em.getToDate().toString());
+                rs = ps.executeQuery();     
+
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+                e.printStackTrace();
+            }
+
+            System.out.println(rs);
+           
+        return rs;
+    }
+       
+        public ResultSet searchleave(empmodel em){
+       Connection connection = null;
+        ResultSet rs = null;
+        Statement st = null;
+        
+        String sql = "select usr.pin, usr.UserName, att.FromDate, att.ToDate, att.LastUpdatedDate, att.Remark  from \n" +
+"                     ras_AttLeaveRecord att\n" +
+"                     inner join ras_Users usr \n" +
+"                     on att.UID = usr.UID \n" +
+"		      where att.LastUpdatedDate between  ? and ? \n" +
+"                     order by usr.PIN";
+            
+            try{
+                connection = DBConnection.openConnection();
+                ps = connection.prepareStatement(sql);
+                ps.setString(1, em.getFromDate().toString());
+                ps.setString(2, em.getToDate().toString());
+                rs = ps.executeQuery(); 
+
+                
+
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+                e.printStackTrace();
+            }
+        
+        return rs;
+    }
+        
+        public ResultSet searchOTList(empmodel em){
+       Connection connection = null;
+        ResultSet rs = null;
+        Statement st = null;
+        
+        String sql = "SELECT att.din, usr.UserName , MAX(clock) as Clock_In, MIN(clock) as Clock_out, DATEDIFF(HOUR, MIN(clock), MAX(clock)) AS Othours, CAST(clock AS DATE) as DateField\n" +
+                    "FROM ras_AttRecord att, ras_Users usr\n" +
+                    "where usr.din = att.din and CAST(clock AS DATE) between ? and ? \n" +
+                    "GROUP BY CAST(clock AS DATE), att.din, usr.UserName";
+        
+            
+            try{
+                connection = DBConnection.openConnection();
+                ps = connection.prepareStatement(sql);
+                ps.setString(1, em.getFromDate().toString());
+                ps.setString(2, em.getToDate().toString());
+                rs = ps.executeQuery(); 
+
+                
+
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+                e.printStackTrace();
+            }
+        
         return rs;
     }
 }

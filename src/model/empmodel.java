@@ -21,11 +21,26 @@ public class empmodel {
     private String searchbranchname;
     private String searchyear;
     private String searchmonth;
+    private String fromDate;
+    private String toDate;
 
-    
-    
+    public void setFromDate(String fromDate) {
+        this.fromDate = fromDate;
+    }
 
-   
+    public void setToDate(String toDate) {
+        this.toDate = toDate;
+    }
+
+    public String getFromDate() {
+        return fromDate;
+    }
+
+    public String getToDate() {
+        return toDate;
+    }
+    
+ 
      public empmodel() {
     }
     

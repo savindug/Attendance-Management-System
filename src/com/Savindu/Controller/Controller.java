@@ -177,44 +177,44 @@ public class Controller {
 //        
 //     }
             
-        public ResultSet otList(){
-             Connection connection = null;
+         public ArrayList<Attendance> getOTList(){
+       Connection connection = null;
         ResultSet rs = null;
         Statement st = null;
-       Attendance att;
-        ArrayList<Attendance> attL = new ArrayList<>();
-       
+         Attendance ot;
+        ArrayList<Attendance> otL = new ArrayList<>();
         
+        String sql ="SELECT att.din, usr.UserName , MAX(clock) as Clock_In, MIN(clock) as Clock_out, DATEDIFF(HOUR, MIN(clock), MAX(clock)) AS Othours, CAST(clock AS DATE) as DateField\n" +
+                    "FROM ras_AttRecord att, ras_Users usr\n" +
+                    "where usr.din = att.din \n" +
+                    "GROUP BY CAST(clock AS DATE), att.din, usr.UserName";
         
-        String sql = " SELECT att.din, usr.UserName, dept.DeptName, CAST(clock as date) as date, CAST(RAND(CHECKSUM(NEWID())) * 4 as INT) + 1 as otTime\n" +
-                    " from ras_AttRecord att, ras_Users usr, ras_Dept dept\n" +
-                    " where usr.din = att.din and dept.DeptId = usr.DeptId and CAST(clock as date) like '2019-11%'";
-        
-         try{
+            
+            try{
                 connection = DBConnection.openConnection();
                 st = connection.createStatement();
-                rs = st.executeQuery(sql);     
-                
-//                while(rs.next()){
-//                    att = new Attendance();
-//                    att.setuId(rs.getString(1));
-//                    att.setuName(rs.getString(2));
-//                    att.setAttTime(rs.getString(3));
-//                    att.setRemark(rs.getString(4));
-//                    attL.add(att);
-//                    //System.out.println(user.getuID()+"\t\t"+user.getuName()+"\t\t"+user.getGender()+"\t\t"+user.getCreateDate()+"\t\t"+user.getLastLoggedIn());
-//
-//                }
-                
+                rs = st.executeQuery(sql);
+
+                while(rs.next()){
+                    leave = new User();
+                    leave.setuID(rs.getString(1));
+                    leave.setuName(rs.getString(2));
+                    leave.setLeaveStart(rs.getString(3));
+                    leave.setLeaveEnd(rs.getString(4));
+                    leave.setLeaveSubmitted(rs.getString(5));
+                    leave.setLeaveRemark(rs.getString(6));
+                    leaveList.add(leave);
+                    System.out.println(leave.getuID()+"\t\t"+leave.getuName()+"\t\t"+leave.getLeaveStart()+"\t\t"+leave.getLeaveEnd()+"\t\t"+leave.getLeaveSubmitted()+"\t\t"+leave.getLeaveRemark());
+
+                }
+
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, e);
                 e.printStackTrace();
             }
-
-            System.out.println(rs);
         
         return rs;
-        }
+    }
  
 
 }

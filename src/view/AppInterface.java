@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -274,7 +275,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(btnviewreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnaddreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnmainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 1, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -403,7 +404,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGroup(mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(301, Short.MAX_VALUE))
+                .addContainerGap(319, Short.MAX_VALUE))
         );
 
         jPanel3.add(mainmenucard, "mainmenucard");
@@ -620,7 +621,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65)
                 .addComponent(btngeneratereportemployeetable, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportsemp, "viewreportsemp");
@@ -757,7 +758,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(settingsnun, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
                 .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
 
         jPanel3.add(changesettingscard, "changesettingscard");
@@ -812,7 +813,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(btnbackaddreports1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
 
         jPanel3.add(addusertable, "addusertable");
@@ -851,6 +852,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         localltsearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         localltsearch.setText("Search");
+        localltsearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                localltsearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout addleavetableLayout = new javax.swing.GroupLayout(addleavetable);
         addleavetable.setLayout(addleavetableLayout);
@@ -889,16 +895,15 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(localltsearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jDatelt1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                        .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jDatelt2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jDatelt1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jDatelt2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(61, 61, 61)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnbackaddreports2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
 
         jPanel3.add(addleavetable, "addleavetable");
@@ -938,6 +943,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         localattsearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         localattsearch.setText("Search");
+        localattsearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                localattsearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout addattendancetableLayout = new javax.swing.GroupLayout(addattendancetable);
         addattendancetable.setLayout(addattendancetableLayout);
@@ -987,7 +997,7 @@ public class AppInterface extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnbackaddreports3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jdateatt1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
         jPanel3.add(addattendancetable, "addattendancetable");
@@ -1044,7 +1054,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGroup(addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnaddnote, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnbackaddreports4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(268, Short.MAX_VALUE))
         );
 
         jPanel3.add(addnotes, "addnotes");
@@ -1151,7 +1161,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74)
                 .addComponent(btngeneratereportatttable, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportsatt, "viewreportsatt");
@@ -1259,7 +1269,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(117, 117, 117)
                 .addComponent(btngeneratereportleavetable, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportsleave, "viewreportsleave");
@@ -1385,7 +1395,7 @@ public class AppInterface extends javax.swing.JFrame {
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewreportscard, "viewreportscard");
@@ -1472,7 +1482,7 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(viewreportsotLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel33)
-                .addContainerGap(822, Short.MAX_VALUE))
+                .addContainerGap(840, Short.MAX_VALUE))
             .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(viewreportsotLayout.createSequentialGroup()
                     .addGap(142, 142, 142)
@@ -1491,7 +1501,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(74, 74, 74)
                     .addComponent(btngeneratereportottable, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(143, Short.MAX_VALUE)))
+                    .addContainerGap(149, Short.MAX_VALUE)))
         );
 
         jPanel3.add(viewreportsot, "viewreportsot");
@@ -1515,7 +1525,7 @@ public class AppInterface extends javax.swing.JFrame {
             .addGroup(viewnotesLayout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addComponent(jLabel34)
-                .addContainerGap(827, Short.MAX_VALUE))
+                .addContainerGap(845, Short.MAX_VALUE))
         );
 
         jPanel3.add(viewnotes, "viewnotes");
@@ -1555,6 +1565,11 @@ public class AppInterface extends javax.swing.JFrame {
 
         localotsearch.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         localotsearch.setText("Search");
+        localotsearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                localotsearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout addottableLayout = new javax.swing.GroupLayout(addottable);
         addottable.setLayout(addottableLayout);
@@ -1593,16 +1608,15 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jDateot1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(localotsearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jDateot2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(localotsearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jDateot2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(52, 52, 52)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnbackaddreports5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
 
         jPanel3.add(addottable, "addottable");
@@ -1624,7 +1638,7 @@ public class AppInterface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1066, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1980,6 +1994,57 @@ public class AppInterface extends javax.swing.JFrame {
         viewreportsleavetable.setModel(DbUtils.resultSetToTableModel(es.viewleave(em)));
     }//GEN-LAST:event_btnleavetablesearchActionPerformed
 
+    private void localattsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_localattsearchActionPerformed
+        // TODO add your handling code here:
+        empmodel em = new empmodel();
+        empservice es = new empservice();
+        SimpleDateFormat sdf;
+        sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String date1 = sdf.format(jdateatt1.getDate());
+        String date2 = sdf.format(jDateatt2.getDate());
+        
+        em.setFromDate(date1);
+        em.setToDate(date2);
+        
+        tableatt.setModel(DbUtils.resultSetToTableModel(es.searchAttList(em)));
+      
+    }//GEN-LAST:event_localattsearchActionPerformed
+
+    private void localltsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_localltsearchActionPerformed
+        // TODO add your handling code here:
+        empmodel em = new empmodel();
+        empservice es = new empservice();
+        SimpleDateFormat sdf;
+        sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String date1 = sdf.format(jDatelt1.getDate());
+        String date2 = sdf.format(jDatelt2.getDate());
+        
+        em.setFromDate(date1);
+        em.setToDate(date2);
+        
+        tableleave.setModel(DbUtils.resultSetToTableModel(es.searchleave(em)));
+       
+    }//GEN-LAST:event_localltsearchActionPerformed
+
+    private void localotsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_localotsearchActionPerformed
+        // TODO add your handling code here:
+        
+        empmodel em = new empmodel();
+        empservice es = new empservice();
+        SimpleDateFormat sdf;
+        sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String date1 = sdf.format(jDateot1.getDate());
+        String date2 = sdf.format(jDateot2.getDate());
+        
+        em.setFromDate(date1);
+        em.setToDate(date2);
+        
+        tableot.setModel(DbUtils.resultSetToTableModel(es.searchOTList(em)));
+       
+    }//GEN-LAST:event_localotsearchActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */
