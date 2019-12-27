@@ -1517,6 +1517,9 @@
               </Events>
             </Component>
             <Component class="javax.swing.JFileChooser" name="jFileChooser1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFileChooser1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnbackaddreports4">
               <Properties>
