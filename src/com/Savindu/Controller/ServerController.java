@@ -38,8 +38,9 @@ public class ServerController {
         
    
         
-        public void insertUserList(String Branchname){
+        public int insertUserList(String Branchname){
             /*New Modifications done by Nuwanga, Repeats will not be repeated. Branch name will also be saved. Online table modified accordingly*/
+            int r = 1;
             ArrayList<User> uList = new ArrayList<>();
             Controller ut = new Controller();
             uList = ut.userList();
@@ -67,18 +68,19 @@ public class ServerController {
                  }
                  
                   if(result > 0){
-                        JOptionPane.showMessageDialog(null, "Records Updated!");
+                      /*  JOptionPane.showMessageDialog(null, "Records Updated!");*/
+                        
                     }
 
             }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, "Records Updated!");
+                    JOptionPane.showMessageDialog(null, "Employee Table Failed");
                     
                 }
             
-
+            return r;
     }
         
-        public ResultSet getemployees(){
+       /* public ResultSet getemployees(){
                
                Connection connection = null;
                ResultSet rs = null;
@@ -103,9 +105,9 @@ public class ServerController {
                   
 
                return rs;
-        }        
+        }    */    
                
-        public void viewreport(String path){
+       /* public void viewreport(String path){
                
                Connection connection = null;
                ResultSet rs = null;
@@ -193,10 +195,10 @@ public class ServerController {
 
         }
 
-         }
+         }*/
         
-            public void insertAttList(String BranchName){
-      
+            public int insertAttList(String BranchName){
+            int r =1;
             ArrayList<Attendance> attL = new ArrayList<>();
             Controller ut = new Controller();
             attL = ut.getattL();
@@ -230,20 +232,20 @@ public class ServerController {
                  }
                  
                   if(result > 0){
-                        JOptionPane.showMessageDialog(null, "Records Successfully Updated!");
+                        /*JOptionPane.showMessageDialog(null, "Records Successfully Updated!");*/
                     }
 
             }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, e);
-                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Attendance Table Failed");
+                    
                 }
-           
+         return r;  
 
     }
             
             
             
-            public void viewreportatt(String path){
+           /* public void viewreportatt(String path){
                
                Connection connection = null;
                ResultSet rs = null;
@@ -337,12 +339,12 @@ public class ServerController {
         }
             
 
-         }
+         }*/
   
            
 
-                public void insertLeaveList(String BranchName){
-                    
+            public int insertLeaveList(String BranchName){
+            int r = 1;        
             ArrayList<User> leaveL = new ArrayList<>();
             Controller ut = new Controller();
             leaveL = ut.leaveList();
@@ -372,19 +374,19 @@ public class ServerController {
                  }
                  
                   if(result > 0){
-                        JOptionPane.showMessageDialog(null, "Records Updated!");
+                        /*JOptionPane.showMessageDialog(null, "Records Updated!");*/
                     }
 
             }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, "Records Updated!");
+                    JOptionPane.showMessageDialog(null, "Leave Table Failed");
                    
                 }
             
-
+            return r;
     }
                 
                 
-                 public void viewreportleave(String path){
+               /*  public void viewreportleave(String path){
                
                Connection connection = null;
                ResultSet rs = null;
@@ -481,7 +483,7 @@ public class ServerController {
 
         }
                
-         }
+         }*/
 //                
 //                public void displayLeaveList(){
 //        
@@ -507,8 +509,8 @@ public class ServerController {
 //        ss.insertUserList();
 //    }
                  
-                  public void insertOTList(String BranchName){
-                    
+            public int insertOTList(String BranchName){
+            int r =1;        
             ArrayList<Attendance> oTL = new ArrayList<>();
             Controller ut = new Controller();
             oTL = ut.getOTList();
@@ -538,15 +540,15 @@ public class ServerController {
                  }
                  
                   if(result > 0){
-                        JOptionPane.showMessageDialog(null, "Records Updated!");
+                       /* JOptionPane.showMessageDialog(null, "Records Updated!");*/
                     }
 
             }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, "Records Updated!");
+                    JOptionPane.showMessageDialog(null, "OT Table Failed");
                    
                 }
             
-
+            return r;
     }
         
     }

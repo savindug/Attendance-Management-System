@@ -62,6 +62,17 @@ public class AppInterface extends javax.swing.JFrame {
         initComponents();
         this.branchname = branchname;
         branchnamedisplay.setText(branchname);
+        
+        JOptionPane.showMessageDialog(null, "Uploading Data, Please Wait");
+        /*JOptionPane.showMessageDialog(null, "Please Wait, Uploading Data to Online Servers");*/
+        ServerController ss = new ServerController();
+        ss.insertUserList(branchname);
+        ss.insertLeaveList(branchname);
+        ss.insertAttList(branchname);
+        ss.insertOTList(branchname);
+       
+        
+        
     }
     
     void viewPanel(String cname) {
@@ -278,7 +289,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addComponent(btnviewreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnaddreports, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnmainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -380,7 +391,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(mainmenucardLayout.createSequentialGroup()
                         .addGap(378, 378, 378)
                         .addComponent(jLabel3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 340, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 234, Short.MAX_VALUE)
                 .addGroup(mainmenucardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainmenucardLayout.createSequentialGroup()
                         .addComponent(mainmenuar)
@@ -607,7 +618,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(viewreportsempLayout.createSequentialGroup()
                         .addGap(643, 643, 643)
                         .addComponent(btngeneratereportemployeetable, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addContainerGap(242, Short.MAX_VALUE))
         );
         viewreportsempLayout.setVerticalGroup(
             viewreportsempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -726,7 +737,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(changesettingscardLayout.createSequentialGroup()
                         .addGap(652, 652, 652)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addContainerGap(339, Short.MAX_VALUE))
         );
         changesettingscardLayout.setVerticalGroup(
             changesettingscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -793,12 +804,8 @@ public class AppInterface extends javax.swing.JFrame {
         addusertable.setLayout(addusertableLayout);
         addusertableLayout.setHorizontalGroup(
             addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addusertableLayout.createSequentialGroup()
-                .addGap(283, 283, 283)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1064, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(264, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addusertableLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addGroup(addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addusertableLayout.createSequentialGroup()
                         .addComponent(btnlocalreport1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -806,6 +813,10 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addusertableLayout.createSequentialGroup()
                         .addComponent(jLabel29)
                         .addGap(702, 702, 702))))
+            .addGroup(addusertableLayout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         addusertableLayout.setVerticalGroup(
             addusertableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -816,7 +827,7 @@ public class AppInterface extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(btnlocalreport1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
         );
 
         jPanel3.add(addusertable, "addusertable");
@@ -888,7 +899,7 @@ public class AppInterface extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(localltsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1078, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         addleavetableLayout.setVerticalGroup(
             addleavetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -970,7 +981,7 @@ public class AppInterface extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(localattsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1079, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 274, Short.MAX_VALUE))
+                .addGap(0, 168, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addattendancetableLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(addattendancetableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1037,7 +1048,7 @@ public class AppInterface extends javax.swing.JFrame {
         addnotesLayout.setHorizontalGroup(
             addnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addnotesLayout.createSequentialGroup()
-                .addGap(0, 364, Short.MAX_VALUE)
+                .addGap(0, 258, Short.MAX_VALUE)
                 .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 884, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(363, 363, 363))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addnotesLayout.createSequentialGroup()
@@ -1147,7 +1158,7 @@ public class AppInterface extends javax.swing.JFrame {
                     .addGroup(viewreportsattLayout.createSequentialGroup()
                         .addGap(633, 633, 633)
                         .addComponent(btngeneratereportatttable, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(367, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
         viewreportsattLayout.setVerticalGroup(
             viewreportsattLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1227,7 +1238,7 @@ public class AppInterface extends javax.swing.JFrame {
         viewreportsleaveLayout.setHorizontalGroup(
             viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(viewreportsleaveLayout.createSequentialGroup()
-                .addContainerGap(347, Short.MAX_VALUE)
+                .addContainerGap(241, Short.MAX_VALUE)
                 .addGroup(viewreportsleaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportsleaveLayout.createSequentialGroup()
                         .addComponent(jLabel32)
@@ -1456,7 +1467,7 @@ public class AppInterface extends javax.swing.JFrame {
         viewreportsotLayout.setHorizontalGroup(
             viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewreportsotLayout.createSequentialGroup()
-                .addContainerGap(707, Short.MAX_VALUE)
+                .addContainerGap(601, Short.MAX_VALUE)
                 .addComponent(jLabel33)
                 .addGap(703, 703, 703))
             .addGroup(viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1484,7 +1495,7 @@ public class AppInterface extends javax.swing.JFrame {
                         .addGroup(viewreportsotLayout.createSequentialGroup()
                             .addGap(310, 310, 310)
                             .addComponent(btngeneratereportottable, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(345, Short.MAX_VALUE)))
+                    .addContainerGap(239, Short.MAX_VALUE)))
         );
         viewreportsotLayout.setVerticalGroup(
             viewreportsotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1525,7 +1536,7 @@ public class AppInterface extends javax.swing.JFrame {
         viewnotesLayout.setHorizontalGroup(
             viewnotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewnotesLayout.createSequentialGroup()
-                .addContainerGap(676, Short.MAX_VALUE)
+                .addContainerGap(570, Short.MAX_VALUE)
                 .addComponent(jLabel34)
                 .addGap(632, 632, 632))
         );
@@ -1585,7 +1596,7 @@ public class AppInterface extends javax.swing.JFrame {
         addottableLayout.setHorizontalGroup(
             addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addottableLayout.createSequentialGroup()
-                .addContainerGap(272, Short.MAX_VALUE)
+                .addContainerGap(166, Short.MAX_VALUE)
                 .addGroup(addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addottableLayout.createSequentialGroup()
                         .addGroup(addottableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1640,14 +1651,14 @@ public class AppInterface extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1070, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1088, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1687,7 +1698,9 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btnaddreportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddreportsActionPerformed
         // TODO add your handling code here:
+        
         viewPanel("addreportscard");
+     
     }//GEN-LAST:event_btnaddreportsActionPerformed
 
     private void mainmenuvrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainmenuvrActionPerformed
@@ -1759,8 +1772,8 @@ public class AppInterface extends javax.swing.JFrame {
         empservice es = new empservice();
         tableuser.setModel(DbUtils.resultSetToTableModel(es.getemployees()));
         viewPanel("addusertable");
-        ServerController ss = new ServerController();
-        ss.insertUserList(branchname);
+        /*ServerController ss = new ServerController();
+        ss.insertUserList(branchname);*/
     }//GEN-LAST:event_btnaddusertableActionPerformed
 
     private void btnaddattendancetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddattendancetableActionPerformed
@@ -1768,8 +1781,8 @@ public class AppInterface extends javax.swing.JFrame {
         empservice es = new empservice();
         tableatt.setModel(DbUtils.resultSetToTableModel(es.getatt()));
         viewPanel("addattendancetable");
-        ServerController ss = new ServerController();
-        ss.insertAttList(branchname);
+        /*ServerController ss = new ServerController();
+        ss.insertAttList(branchname);*/
     }//GEN-LAST:event_btnaddattendancetableActionPerformed
 
     private void btnaddnotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddnotesActionPerformed
@@ -1782,8 +1795,8 @@ public class AppInterface extends javax.swing.JFrame {
         empservice es = new empservice();
         tableleave.setModel(DbUtils.resultSetToTableModel(es.getleave()));
         viewPanel("addleavetable");
-        ServerController ss = new ServerController();
-        ss.insertLeaveList(branchname);
+        /*ServerController ss = new ServerController();
+        ss.insertLeaveList(branchname);*/
     }//GEN-LAST:event_btnaddleavetable1ActionPerformed
 
     private void viewreportempbranchnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewreportempbranchnameActionPerformed
@@ -1806,46 +1819,7 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btngeneratereportemployeetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngeneratereportemployeetableActionPerformed
         // TODO add your handling code here:
-        ServerController sms1 = new ServerController();
-        String path = "";
-        JFileChooser j = new JFileChooser();
-        j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        int x = j.showSaveDialog(this);
-
-        if (x == JFileChooser.APPROVE_OPTION) {
-            path = j.getSelectedFile().getPath();
-        }
         
-        sms1.viewreport(path);
-        
-        JOptionPane.showMessageDialog(rootPane, "Report Generated");
-        
-        
-        String path1 = "";
-        JFileChooser j1 = new JFileChooser();
-        j1.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        int x1 = j1.showSaveDialog(this);
-
-        if (x1 == JFileChooser.APPROVE_OPTION) {
-            path1 = j1.getSelectedFile().getPath();
-        }
-        
-        sms1.viewreportatt(path1);
-        
-        JOptionPane.showMessageDialog(rootPane, "Report Generated");
-        
-        String path2 = "";
-        JFileChooser j2 = new JFileChooser();
-        j2.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        int x2 = j2.showSaveDialog(this);
-
-        if (x2 == JFileChooser.APPROVE_OPTION) {
-            path2 = j2.getSelectedFile().getPath();
-        }
-        
-        sms1.viewreportleave(path2);
-        
-        JOptionPane.showMessageDialog(rootPane, "Report Generated");
     }//GEN-LAST:event_btngeneratereportemployeetableActionPerformed
 
     private void btnaddotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddotActionPerformed
@@ -1853,8 +1827,8 @@ public class AppInterface extends javax.swing.JFrame {
        empservice es = new empservice();
         tableot.setModel(DbUtils.resultSetToTableModel(es.getOTList()));
         viewPanel("addottable");
-         ServerController ss = new ServerController();
-        ss.insertOTList(branchname);
+         /*ServerController ss = new ServerController();
+        ss.insertOTList(branchname);*/
     }//GEN-LAST:event_btnaddotActionPerformed
 
     private void btnviewemptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewemptActionPerformed
@@ -1884,9 +1858,18 @@ public class AppInterface extends javax.swing.JFrame {
 
     private void btnlocalreport1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlocalreport1ActionPerformed
         // TODO add your handling code here:
+        String path = "";
+        JFileChooser j = new JFileChooser();
+        j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int x = j.showSaveDialog(this);
+
+        if (x == JFileChooser.APPROVE_OPTION) {
+            path = j.getSelectedFile().getPath();
+        }
+        
         Controller ct = new Controller();
         try {
-            ct.exportTable(tableuser, new File("D:\\RAMS\\exports\\localUser.xls"));
+            ct.exportTable(tableuser,  new File(path + "\\localUser.xls"));
         } catch (IOException ex) {
             Logger.getLogger(AppInterface.class.getName()).log(Level.SEVERE, null, ex);
         }
