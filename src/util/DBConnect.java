@@ -26,6 +26,8 @@ public class DBConnect {
             System.out.println("Database Connected!");
             DriverManager.setLoginTimeout(1200);
             /*conn = DriverManager.getConnection("jdbc:mysql://johnny.heliohost.org:3306/nwsb_att_sys", "nwsb", "nw2251997");
+            System.out.println("Database Connected!");
+             */
             System.out.println("Database Connected!");*/
              
            

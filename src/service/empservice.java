@@ -225,34 +225,6 @@ public class empservice {
          
      }
      
-     
-     public ResultSet viewot(empmodel em){
-         
-        con = DBConnect.connect();
-       
-        ResultSet rs = null;
-        
-        try {           
-            
-            ps = con.prepareStatement("Select o.userId, o.UserName, o.branchName, e.deptName, o.date, o.clockIn, o.clockOut ,o.otHours \n"
-                    + " from Employees e, otTable o\n"
-                    + "where o.userId = e.userId and o.branchname = ? and o.date like ? \n"
-                    + "Order by o.date");
-            ps.setString(1, em.getSearchbranchname());
-            ps.setString(2, em.getSearchyear().toString()+"-"+em.getSearchmonth().toString()+"%");
-            rs = ps.executeQuery();
-            
-           
-        } catch (SQLException ex) {
-            Logger.getLogger(empservice.class.getName()).log(Level.SEVERE, null, ex);
-        }
-      
-        return rs;
-         
-     }
-     
-     
-     
      public ResultSet getemployees(){
         Connection connection = null;
         ResultSet rs = null;
